@@ -61,6 +61,7 @@ namespace ET
                             response.Error = ErrorCode.ERR_AccountIntBlackListError;
                             reply();
                             session.Disconnect().Coroutine();
+                            account?.Dispose();
                             return;
                         }
 
@@ -69,6 +70,7 @@ namespace ET
                             response.Error = ErrorCode.ERR_LoginPasswordError;
                             reply();
                             session.Disconnect().Coroutine();
+                            account?.Dispose();
                             return;
                         }
                     }
@@ -80,6 +82,18 @@ namespace ET
                         account.CreatTime = TimeHelper.ServerNow();
                         account.AccountType = (int)AccountType.General;
                         await DBManagerComponent.Instance.GetZoneDB(session.DomainZone()).Save<Account>(account);
+                    }
+
+                    StartSceneConfig startSceneConfig = StartSceneConfigCategory.Instance.GetBySceneName(session.DomainZone(), "LoginCenter");
+                    long loginCenterInstanceId = startSceneConfig.InstanceId;
+                    L2A_LoginAccountResponse loginAccountResponse = (L2A_LoginAccountResponse) await ActorMessageSenderComponent.Instance.Call(loginCenterInstanceId, new A2L_LoginAccountRequest() {AccountId = account.Id});
+                    if (loginAccountResponse.Error != ErrorCode.ERR_Success)
+                    {
+                        response.Error = loginAccountResponse.Error;
+                        reply();
+                        session?.Disconnect().Coroutine();
+                        account?.Dispose();
+                        return;
                     }
 
                     long accountSessionInstanceId = session.DomainScene().GetComponent<AccountSessionsComponent>().Get(account.Id);
