@@ -28,5 +28,31 @@
             // 通知等待场景切换的协程
             zoneScene.GetComponent<ObjectWait>().Notify(new WaitType.Wait_SceneChangeFinish());
         }
+        
+        public static async ETTask SceneChangeToTest(Scene zoneScene, string sceneName, long sceneInstanceId)
+        {
+
+            CurrentScenesComponent currentScenesComponent = zoneScene.GetComponent<CurrentScenesComponent>();
+            currentScenesComponent.Scene?.Dispose(); // 删除之前的CurrentScene，创建新的
+            Scene currentScene = SceneFactory.CreateCurrentScene(sceneInstanceId, zoneScene.Zone, sceneName, currentScenesComponent);
+            UnitComponent unitComponent = currentScene.AddComponent<UnitComponent>();
+         
+            // 可以订阅这个事件中创建Loading界面
+            Game.EventSystem.Publish(new EventType.SceneChangeStart() {ZoneScene = zoneScene});
+
+            // 等待CreateMyUnit的消息
+            // WaitType.Wait_CreateMyUnit waitCreateMyUnit = await zoneScene.GetComponent<ObjectWait>().Wait<WaitType.Wait_CreateMyUnit>();
+            // M2C_CreateMyUnit m2CCreateMyUnit = waitCreateMyUnit.Message;
+            Unit unit = UnitFactory.Create(currentScene, new UnitInfo());
+            unitComponent.Add(unit);
+            
+            // zoneScene.RemoveComponent<AIComponent>();
+            
+            // Game.EventSystem.Publish(new EventType.SceneChangeFinish() {ZoneScene = zoneScene, CurrentScene = currentScene});
+
+            // 通知等待场景切换的协程
+            // zoneScene.GetComponent<ObjectWait>().Notify(new WaitType.Wait_SceneChangeFinish());
+            await ETTask.CompletedTask;
+        }
     }
 }
