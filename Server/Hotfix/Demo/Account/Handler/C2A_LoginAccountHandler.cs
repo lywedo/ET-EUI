@@ -29,7 +29,7 @@ namespace ET
                 return;
             }
 
-            if (Regex.IsMatch(request.AccountName.Trim(),@"^(?=.*[0-9].*)(?=.*[A-Z].*)(?=.*[a-z].*).{6,15}$"))
+            if (!Regex.IsMatch(request.AccountName.Trim(),@"^(?=.*[0-9].*)(?=.*[A-Z].*)(?=.*[a-z].*).{6,15}$"))
             {
                 response.Error = ErrorCode.ERR_AccountNameFormError;
                 reply();
@@ -37,20 +37,21 @@ namespace ET
                 return;
             }
             
-            if (Regex.IsMatch(request.Password.Trim(),@"^(?=.*[0-9].*)(?=.*[A-Z].*)(?=.*[a-z].*).{6,15}$"))
+            if (!Regex.IsMatch(request.Password.Trim(),@"^[A-Za-z0-9]+$"))
             {
                 response.Error = ErrorCode.ERR_PassswordFormError;
                 reply();
                 session.Disconnect().Coroutine();
                 return;
             }
-
+            Log.Info("开始操作数据库");
             using (session.AddComponent<SessionLockingComponent>())
             {
                 using (await CoroutineLockComponent.Instance.Wait(CoroutineLockType.LoginAccount, request.AccountName.Trim().GetHashCode()))
                 {
                     var accountInfoList = await DBManagerComponent.Instance.GetZoneDB(session.DomainZone())
                             .Query<Account>(d => d.AccountName.Equals(request.AccountName.Trim()));
+                    Log.Info($"开始操作数据库 {accountInfoList.Count}");
                     Account account = null;
                     if (accountInfoList != null && accountInfoList.Count > 0)
                     {
@@ -81,6 +82,7 @@ namespace ET
                         account.Password = request.Password;
                         account.CreatTime = TimeHelper.ServerNow();
                         account.AccountType = (int)AccountType.General;
+                        Log.Info($"开始操作数据库 save {account.AccountName}");
                         await DBManagerComponent.Instance.GetZoneDB(session.DomainZone()).Save<Account>(account);
                     }
 

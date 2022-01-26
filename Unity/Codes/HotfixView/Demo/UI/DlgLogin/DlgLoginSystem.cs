@@ -31,6 +31,8 @@ namespace ET
                     Log.Error(errorcode.ToString());
                 }
                 //TODO 显示登陆之后页面
+                self.DomainScene().GetComponent<UIComponent>().HideWindow(WindowID.WindowID_Login);
+                self.DomainScene().GetComponent<UIComponent>().ShowWindow(WindowID.WindowID_Lobby);
             }
             catch (Exception e)
             {
