@@ -283,6 +283,9 @@
      <Reference Include="ICSharpCode.SharpZipLib">
      <HintPath>D:/works/ET-EUI/Unity/Assets/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
      </Reference>
+     <Reference Include="clipper_library">
+     <HintPath>D:/works/ET-EUI/Unity/Library/PackageCache/com.unity.cinemachine@2.8.0/Runtime/ThirdParty/clipper_library.dll</HintPath>
+     </Reference>
      <Reference Include="nunit.framework">
      <HintPath>D:/works/ET-EUI/Unity/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
      </Reference>
