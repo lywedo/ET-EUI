@@ -179,6 +179,6 @@ message L2G_DisconnectGateUnit // IActorRequest
 message G2L_DisconnectGateUnit //IActorResponse
 {
 	int32 RpcId = 90;
-	int32 Error = 1;
-	string Message = 2;
+	int32 Error = 91;
+	string Message = 92;
 }

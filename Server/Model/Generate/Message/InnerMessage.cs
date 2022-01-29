@@ -373,10 +373,10 @@ namespace ET
 		[ProtoMember(90)]
 		public int RpcId { get; set; }
 
-		[ProtoMember(1)]
+		[ProtoMember(91)]
 		public int Error { get; set; }
 
-		[ProtoMember(2)]
+		[ProtoMember(92)]
 		public string Message { get; set; }
 
 	}

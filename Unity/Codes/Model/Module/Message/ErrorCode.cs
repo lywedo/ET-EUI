@@ -20,5 +20,6 @@ namespace ET
         public const int ERR_AccountIntBlackListError = 200006;
         public const int ERR_LoginPasswordError = 200007; //登陆密码错误
         public const int ERR_RequestRepeatedly = 200008;
+        public const int ERR_TokenError = 200009;
     }
 }

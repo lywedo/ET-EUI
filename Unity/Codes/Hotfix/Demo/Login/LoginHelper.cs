@@ -67,6 +67,38 @@ namespace ET
             // {
             //     Log.Error(e);
             // }
-        } 
+        }
+
+        public static async ETTask<int> GetServerInfo(Scene zoneScene)
+        {
+            A2C_GetServerInfos a2CgetServerInfos = null;
+            try
+            {
+                a2CgetServerInfos = (A2C_GetServerInfos) await zoneScene.GetComponent<SessionComponent>().Session.Call(new C2A_GetServerInfos()
+                {
+                    AccountId = zoneScene.GetComponent<AccountInfoComponent>().AccountId,
+                    Token = zoneScene.GetComponent<AccountInfoComponent>().Token
+                });
+            }
+            catch (Exception e)
+            {
+                Log.Error(e.ToString());
+                return ErrorCode.ERR_NetorkError;
+            }
+
+            if (a2CgetServerInfos.Error != ErrorCode.ERR_Success)
+            {
+                return a2CgetServerInfos.Error;
+            }
+
+            foreach (ServerInfoProto serverInfoProto in a2CgetServerInfos.ServerInfoProtoList)
+            {
+                ServerInfo serverInfo = zoneScene.GetComponent<ServerInfosComponent>().AddChild<ServerInfo>();
+                serverInfo.FromMessage(serverInfoProto);
+                zoneScene.GetComponent<ServerInfosComponent>().Add(serverInfo);
+            }
+            await ETTask.CompletedTask;
+            return ErrorCode.ERR_Success;
+        }
     }
 }
