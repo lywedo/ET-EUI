@@ -82,6 +82,11 @@ namespace ET
             public Unit Unit;
         }
         
+        public struct CreateJoystick
+        {
+            public Scene ZoneScene;
+        }
+        
         public struct MoveStart
         {
             public Unit Unit;

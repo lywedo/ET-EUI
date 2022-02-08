@@ -33,7 +33,8 @@ namespace ET
                 //TODO 显示登陆之后页面
                 self.DomainScene().GetComponent<UIComponent>().HideWindow(WindowID.WindowID_Login);
                 // self.DomainScene().GetComponent<UIComponent>().ShowWindow(WindowID.WindowID_Lobby);
-                await SceneChangeHelper.SceneChangeToTest(self.ZoneScene(), "TestScene", 1);
+                await SceneChangeHelper.SceneChangeToTest(self.ZoneScene(), "ControllerScene", 1);
+                Game.EventSystem.Publish(new EventType.CreateJoystick(){ZoneScene = self.ZoneScene()});
             }
             catch (Exception e)
             {
