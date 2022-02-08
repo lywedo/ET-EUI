@@ -100,5 +100,33 @@ namespace ET
             await ETTask.CompletedTask;
             return ErrorCode.ERR_Success;
         }
+
+        public static async ETTask<int> CreateRole(Scene zoneScene, string name)
+        {
+            A2C_CreateRole a2CCreateRole = null;
+            try
+            {
+                a2CCreateRole = (A2C_CreateRole)await zoneScene.GetComponent<SessionComponent>().Session.Call(new C2A_CreateRole()
+                {
+                    AccountId = zoneScene.GetComponent<AccountInfoComponent>().AccountId,
+                    Token = zoneScene.GetComponent<AccountInfoComponent>().Token,
+                    Name = name,
+                    ServerId = 1 //写死先
+                });
+            }
+            catch (Exception e)
+            {
+                Log.Error(e.ToString());
+                return ErrorCode.ERR_NetorkError;
+            }
+
+            if (a2CCreateRole.Error != ErrorCode.ERR_Success)
+            {
+                Log.Error(a2CCreateRole.Error.ToString());
+                return a2CCreateRole.Error;
+            }
+            await ETTask.CompletedTask;
+            return ErrorCode.ERR_Success;
+        }
     }
 }
