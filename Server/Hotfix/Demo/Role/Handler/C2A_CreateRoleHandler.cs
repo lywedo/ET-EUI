@@ -13,6 +13,14 @@ namespace ET
                 return;
             }
 
+            if (session.GetComponent<SessionLockingComponent>() != null)
+            {
+                response.Error = ErrorCode.ERR_RequestRepeatedly;
+                reply();
+                session.Disconnect().Coroutine();
+                return;
+            }
+
             string token = session.DomainScene().GetComponent<TokenComponent>().Get(request.AccountId);
             if (token == null || token != request.Token)
             {
@@ -26,9 +34,37 @@ namespace ET
             {
                 response.Error = ErrorCode.ERR_RoleNameIsNull;
                 reply();
-                session?.Disconnect().Coroutine();
                 return;
             }
+
+            using (session.AddComponent<SessionLockingComponent>())
+            {
+                using (await CoroutineLockComponent.Instance.Wait(CoroutineLockType.CreateRoleLock, request.AccountId))
+                {
+                    var roleInfos = await DBManagerComponent.Instance.GetZoneDB(session.DomainZone()).Query<RoleInfo>(d => d.Name == request.Name && d.ServerId == request.ServerId);
+                    if (roleInfos != null && roleInfos.Count > 0)
+                    {
+                        response.Error = ErrorCode.ERR_RoleNameSame;
+                        reply();
+                        return;
+                    }
+
+                    RoleInfo newRoleInfo = session.AddChildWithId<RoleInfo>(IdGenerater.Instance.GenerateUnitId(request.ServerId));
+                    newRoleInfo.Name = request.Name;
+                    newRoleInfo.State = (int) RoleInfoState.Normal;
+                    newRoleInfo.ServerId = request.ServerId;
+                    newRoleInfo.AccountId = request.AccountId;
+                    newRoleInfo.CreateTime = TimeHelper.ServerNow();
+                    newRoleInfo.LastLoginTime = 0;
+
+                    await DBManagerComponent.Instance.GetZoneDB(session.DomainZone()).Save<RoleInfo>(newRoleInfo);
+                    response.RoleInfo = newRoleInfo.ToMessage();
+                    reply();
+                    newRoleInfo?.Dispose();
+                }
+            }
+
+            
             await ETTask.CompletedTask;
         }
     }

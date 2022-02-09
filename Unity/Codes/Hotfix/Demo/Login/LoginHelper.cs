@@ -111,7 +111,7 @@ namespace ET
                     AccountId = zoneScene.GetComponent<AccountInfoComponent>().AccountId,
                     Token = zoneScene.GetComponent<AccountInfoComponent>().Token,
                     Name = name,
-                    ServerId = 1 //写死先
+                    ServerId = zoneScene.GetComponent<ServerInfosComponent>().CurrentServerId
                 });
             }
             catch (Exception e)
@@ -125,7 +125,10 @@ namespace ET
                 Log.Error(a2CCreateRole.Error.ToString());
                 return a2CCreateRole.Error;
             }
-            await ETTask.CompletedTask;
+
+            RoleInfo newRoleInfo = zoneScene.GetComponent<RoleInfosComponent>().AddChild<RoleInfo>();
+            newRoleInfo.FromMessage(a2CCreateRole.RoleInfo);
+            zoneScene.GetComponent<RoleInfosComponent>().RoleInfos.Add(newRoleInfo);
             return ErrorCode.ERR_Success;
         }
     }
