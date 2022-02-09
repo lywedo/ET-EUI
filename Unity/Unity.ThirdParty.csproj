@@ -90,8 +90,8 @@
      <Compile Include="Assets\ThirdParty\ILRuntime\Mono.Cecil\Mono.Cecil.Cil\SequencePoint.cs" />
      <Compile Include="Assets\ThirdParty\ILRuntime\Mono.Cecil\Mono.Cecil\FieldReference.cs" />
      <Compile Include="Assets\ThirdParty\protobuf-net\Serializers\UInt32Serializer.cs" />
-     <Compile Include="Assets\ThirdParty\ILRuntime\Mono.Cecil\Mono.Cecil\TypeParser.cs" />
      <Compile Include="Assets\ThirdParty\protobuf-net\Meta\RuntimeTypeModel.cs" />
+     <Compile Include="Assets\ThirdParty\ILRuntime\Mono.Cecil\Mono.Cecil\TypeParser.cs" />
      <Compile Include="Assets\ThirdParty\ILRuntime\Runtime\Debugger\StepTypes.cs" />
      <Compile Include="Assets\ThirdParty\ILRuntime\Runtime\Debugger\Protocol\SCBreakpointHit.cs" />
      <Compile Include="Assets\ThirdParty\ILRuntime\Mono.Cecil\Mono.Cecil\Treatments.cs" />
@@ -113,8 +113,8 @@
      <Compile Include="Assets\ThirdParty\protobuf-net\Serializers\NullDecorator.cs" />
      <Compile Include="Assets\ThirdParty\ILRuntime\Runtime\Intepreter\RegisterVM\Optimizer.Utils.cs" />
      <Compile Include="Assets\ThirdParty\ILRuntime\Mono.Cecil\Mono.Cecil\CallSite.cs" />
-     <Compile Include="Assets\ThirdParty\ILRuntime\Runtime\Intepreter\RegisterVM\CodeBasicBlock.cs" />
      <Compile Include="Assets\ThirdParty\protobuf-net\DiscriminatedUnion.cs" />
+     <Compile Include="Assets\ThirdParty\ILRuntime\Runtime\Intepreter\RegisterVM\CodeBasicBlock.cs" />
      <Compile Include="Assets\ThirdParty\ILRuntime\Mono.Cecil\Mono.Cecil\TypeReference.cs" />
      <Compile Include="Assets\ThirdParty\ILRuntime\Mono.Cecil\Mono.Cecil.Cil\CodeWriter.cs" />
      <Compile Include="Assets\ThirdParty\ILRuntime\Mono.Cecil\symbols\pdb\Microsoft.Cci.Pdb\PdbFileHeader.cs" />
@@ -228,8 +228,8 @@
      <Compile Include="Assets\ThirdParty\ETTask\ETTaskHelper.cs" />
      <Compile Include="Assets\ThirdParty\ILRuntime\Other\NeedAdaptorAttribute.cs" />
      <Compile Include="Assets\ThirdParty\protobuf-net\Meta\ProtoSyntax.cs" />
-     <Compile Include="Assets\ThirdParty\protobuf-net\Meta\TypeModel.cs" />
      <Compile Include="Assets\ThirdParty\ILRuntime\Mono.Cecil\Mono.Cecil.PE\ImageWriter.cs" />
+     <Compile Include="Assets\ThirdParty\protobuf-net\Meta\TypeModel.cs" />
      <Compile Include="Assets\ThirdParty\ILRuntime\Mono.Cecil\Mono.Cecil\TypeSpecification.cs" />
      <Compile Include="Assets\ThirdParty\protobuf-net\Serializers\ListDecorator.cs" />
      <Compile Include="Assets\ThirdParty\ILRuntime\Runtime\Debugger\Protocol\CSResolveVariable.cs" />
@@ -282,8 +282,8 @@
      <Compile Include="Assets\ThirdParty\ILRuntime\Runtime\Intepreter\OpCodes\OpCodeREnum.cs" />
      <Compile Include="Assets\ThirdParty\ILRuntime\Mono.Cecil\Mono.Cecil\EmbeddedResource.cs" />
      <Compile Include="Assets\ThirdParty\ILRuntime\CLR\Utils\Extensions.cs" />
-     <Compile Include="Assets\ThirdParty\ILRuntime\Mono.Cecil\Mono.Cecil\IMarshalInfoProvider.cs" />
      <Compile Include="Assets\ThirdParty\protobuf-net\Serializers\ProtoDecoratorBase.cs" />
+     <Compile Include="Assets\ThirdParty\ILRuntime\Mono.Cecil\Mono.Cecil\IMarshalInfoProvider.cs" />
      <Compile Include="Assets\ThirdParty\protobuf-net\Serializers\TagDecorator.cs" />
      <Compile Include="Assets\ThirdParty\protobuf-net\ProtoConverterAttribute.cs" />
      <Compile Include="Assets\ThirdParty\ILRuntime\Mono.Cecil\Mono.Cecil.Metadata\UserStringHeap.cs" />
@@ -657,14 +657,14 @@
      <Reference Include="CommandLine">
      <HintPath>E:/works/ET-EUI/Unity/Assets/Plugins/CommandLine.dll</HintPath>
      </Reference>
-     <Reference Include="clipper_library">
-     <HintPath>E:/works/ET-EUI/Unity/Library/PackageCache/com.unity.cinemachine@2.8.0/Runtime/ThirdParty/clipper_library.dll</HintPath>
-     </Reference>
      <Reference Include="ICSharpCode.NRefactory">
      <HintPath>E:/works/ET-EUI/Unity/Library/PackageCache/com.unity.render-pipelines.core@10.7.0/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
      </Reference>
      <Reference Include="ICSharpCode.SharpZipLib">
      <HintPath>E:/works/ET-EUI/Unity/Assets/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
+     </Reference>
+     <Reference Include="clipper_library">
+     <HintPath>E:/works/ET-EUI/Unity/Library/PackageCache/com.unity.cinemachine@2.8.0/Runtime/ThirdParty/clipper_library.dll</HintPath>
      </Reference>
      <Reference Include="mscorlib">
      <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.22f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

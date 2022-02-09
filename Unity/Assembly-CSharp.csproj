@@ -41,263 +41,263 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Stats\ModifyStatSO.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Input\MobileJoystick.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\States\Climb\MClimbable.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Attributes Drawers\RangedFloat.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Modes\ModeModifier.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Camera\CameraWallStop.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Tools\LockAxis.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Decisions\CheckScriptableVar.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\TransformListener.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Events\MessagesSO.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Attributes Drawers\EnforceTypeAttribute.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\ScriptableVar.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Effects\StepTrigger.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Interfaces\IInputSource.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\ID\StateID.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Damage\MProjectileThrower.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Behaviours\ModeBehaviour.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\MAnimalVariables.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\FloatVarListener.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\States\Swim.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\UI\LookAtCamera.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\VarListener.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\States\Locomotion.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Aim\LookAt.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Behaviors\LayersBehavior.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\ResetScriptableVarsAsset.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Interfaces\IProjectile.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\ScriptableList.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Behaviours\AttackTriggerBehaviour.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Events\MEventListener.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\ScaleBonesFix.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\ID\ModeID.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Events\EnableDisableEvent.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Compatible StA\FPS\MRigidbodyFPSController.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Tasks\InvokeEventTask.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Interfaces\ISleepController.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\UI\UIFollowTransform.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Effects\FireBallEffectM.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\Vector3Var.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\UI\FadeInOutGraphic.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\Vector2Var.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Decisions\TaskDecision.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\MalbersEditor.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\TransformAnimation.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Modes\Mode.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Reactions\ModeReaction.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\MScriptableCoroutine.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Behaviors\LookAtBehaviour.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Interfaces\IGravity.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\ID\IDs.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Cinemachine\CameraInputMapper.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\MAnimalLogic.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\PublicEnums.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\DeltaTransform.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Interfaces\IMAnimator.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Interfaces\IMLayer.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Decisions\CheckVarListener.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Input\MalbersInput.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Events\MEvent.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\MAnimalAIControl.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\RunTime Collections\RuntimeCollection.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\States\Fall.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Interfaces\IRider.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Decisions\IsTargetInSetDecision.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\AI\PointClickData.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Attributes Drawers\HelpBoxAttribute.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Interactions\MPickUp.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Damage\MAttackTrigger.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Tasks\SetLookAtTask.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Tools\ComponentSelector.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Reactions\MReaction.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\MRespawner.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Tasks\MessageTask.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\MaterialListVar.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Tools\ForwardDirToV3.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Mesh\MaterialLerp.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\AI\PointClick.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Decisions\CheckStateDecision.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Stats\Stats.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\MAIDecision.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\AudioClipListVar.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Readme\Readme.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Tasks\PatrolTask.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Zone.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Events\MalbersEvents.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\AI\AITarget.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Effects\SoundByMaterial.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Attributes Drawers\FlagAttribute.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\MAnimalBrain.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Decisions\ORDecision.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\IntComparer.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Behaviors\RandomBehavior.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\IntVarListener.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Compatible StA\FPS\MHeadBob.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\BoolVar.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Camera\MFreeLookCamera.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Input\MInput.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Damage\MExplosion.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\MAnimalCallBacks.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\RunTime Collections\RuntimeGameObjects.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\AI\FollowTargetExtended.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Tasks\SetTargetTask.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\StringVar.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\ID\StatID.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Behaviors\MessagesBehavior.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Tasks\WaitTask.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\ID\StanceID.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Tools\GlobalGravity.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Damage\MProjectile.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Attributes Drawers\MinMaxRangeAttribute.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Decisions\ANDDecision.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Mesh\MaterialLerpSO.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Events\MessagesSO.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\ScriptableVar.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Behaviours\ModeBehaviour.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\FloatVarListener.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\VarListener.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\States\Locomotion.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Behaviors\LayersBehavior.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\ScriptableList.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\ScaleBonesFix.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Effects\FireBallEffectM.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\MScriptableCoroutine.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\MAnimalLogic.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\RunTime Collections\TransformHook.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\MAnimal.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\States\Death.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\StringVarListener.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Mesh\MaterialPropertyLerpSO.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Mesh\ReboneMesh.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Tools\Dismember.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Tools\UseTransform.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\RunTime Collections\GameObjectHook.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Events\Messages.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Interactions\Pickable.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\UI\ValueToString.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Decisions\WaitDecision.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Tasks\SetVarListener.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Interfaces\IWayPoint.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Interfaces\IMDamage.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Effects\FireBreath.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\States\SwimUnderwater.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Tools\Comment.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Camera\ChangeTarget.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\MSpeed.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\RunTime Collections\AudioClipCollection.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Effects\AnimatorEventSounds.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Tasks\ChangeSpeedTask.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\GameObjectVar.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Mesh\ActiveMeshes.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\ColorVar.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Modes\ModifierDodge.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\MCheckPoint.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Aim\AimTarget.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Reactions\GravityReaction.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\StringComparer.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Interfaces\IInteractable.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Tools\Limb.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Events\UnityEventRaiser.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Damage\SimpleThrow.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Attributes Drawers\RequiredFieldAttribute.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\RunTime Collections\GetRuntimeGameObjects.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Mesh\BlendShapePreset.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Triggers\TriggerExit.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\AI\FollowTarget.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Stats\StatRandomizer.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Interfaces\IAIControl.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\UI\UpVectorTransform.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Tags\ITag.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Attributes Drawers\RangedFloat.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Tools\LockAxis.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Decisions\CheckScriptableVar.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Effects\StepTrigger.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Interfaces\IInputSource.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Damage\MProjectileThrower.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Aim\LookAt.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Interfaces\IProjectile.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\ResetScriptableVarsAsset.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Behaviours\AttackTriggerBehaviour.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\ID\ModeID.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Events\EnableDisableEvent.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\MalbersEditor.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Modes\Mode.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Behaviors\LookAtBehaviour.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Interfaces\IGravity.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\PublicEnums.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Tasks\QuickAlignTask.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\RunTime Collections\TransformHook.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\States\Idle.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\TransformVar.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Triggers\TriggerEnter.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\MAnimal.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Tasks\PlayModeTask.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\ResetScriptableVars.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\States\Death.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\ComboManager.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Reactions\MReactionsList.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\StringVarListener.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\LayerVar.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\MalbersAnimationExtensions.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\States\Climb.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Decisions\CheckVarListener.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\DragonEgg.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Input\MalbersInput.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\MaterialVar.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Animator\MAnimalAnimatorSync.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Mesh\MaterialPropertyLerpSO.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Behaviours\ModifierBehaviour.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Events\MEvent.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Attributes Drawers\HideAttribute.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Mesh\ReboneMesh.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\MAnimalAIControl.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Mesh\MaterialChanger.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Hash.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\MTask.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\RunTime Collections\RuntimeCollection.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\MStrafe.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\States\Fall.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\BoolVarListener.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Tools\Dismember.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Damage\MDamageable.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Interfaces\IRider.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Timeline\MTimelineManager.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Tools\UseTransform.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Decisions\IsTargetInSetDecision.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\RunTime Collections\GameObjectHook.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Tasks\SetStanceTask.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\IntVar.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Interfaces\ICollectable.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Events\Messages.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Interactions\Pickable.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\AI\PointClickData.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Attributes Drawers\HelpBoxAttribute.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\ID\MAction.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\UnityUtils.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\UI\ValueToString.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Interactions\MInteractor.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Tools\GizmoVisualizer.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Behaviors\RigidConstraintsB.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Decisions\WaitDecision.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Tasks\SetVarListener.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Modes\MAttackAligner.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Interfaces\IWayPoint.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Interactions\MPickUp.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Mesh\BlendShape.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Damage\MAttackTrigger.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Tasks\SetLookAtTask.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Behaviors\IsKinematicB.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Reactions\StateReaction.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\VariableReferenceDrawer.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\PlayTransformAnimation.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Tools\Aligner.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Tasks\ChanceTask.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Interfaces\IMDamage.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Effects\FireBreath.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Effects\EffectManager.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Tools\ComponentSelector.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\States\SwimUnderwater.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\MModeAlign.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Tasks\SetStatTask.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Reactions\MReaction.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Damage\MDamager.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Camera\FreeLookCameraState.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Modes\MDirectionalDamage.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Triggers\TriggerProxy.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Tools\Comment.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\FloatComparer.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Decisions\CheckStanceDecision.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Camera\ChangeTarget.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Mesh\BonePreset.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Interfaces\IAim.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\CapsuleColliderPreset.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Tags\Tag.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\MRespawner.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\MSpeed.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Tasks\MessageTask.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\RunTime Collections\AudioClipCollection.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\ScriptableCoroutine.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Effects\AnimatorEventSounds.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\MPivot.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\MaterialListVar.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Tasks\ChangeSpeedTask.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Tools\ForwardDirToV3.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Tasks\PlayStateTask.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Compatible StA\FPS\MMouseLook.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Tags\Tags.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Interfaces\IAlign.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Interfaces\IScene.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\States\JumpBasic.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Decisions\ArriveDecision.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Decisions\CheckStatDecision.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Damage\MDisplayTrajectory.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\AI\MWayPoint.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Reactions\MovementReaction.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Tags\AnimationTag.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Interactions\MInteract.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Reactions\SpeedReaction.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Behaviors\CommentB.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Effects\StepsManager.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\MTools.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\States\State.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\States\Fly.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Attributes Drawers\CreateScriptableAssetAttribute.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Stats\ModifyStatSO.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Camera\CameraWallStop.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Attributes Drawers\EnforceTypeAttribute.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\ID\StateID.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Compatible StA\FPS\MRigidbodyFPSController.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Interfaces\ISleepController.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Tasks\InvokeEventTask.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\Vector3Var.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\Vector2Var.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Decisions\TaskDecision.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Cinemachine\CameraInputMapper.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Triggers\TriggerEnter.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\ResetScriptableVars.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\ComboManager.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\MalbersAnimationExtensions.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Behaviours\ModifierBehaviour.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Attributes Drawers\HideAttribute.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\MTask.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Damage\MDamageable.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Timeline\MTimelineManager.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Interfaces\ICollectable.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\ID\MAction.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Modes\MAttackAligner.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\PlayTransformAnimation.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\VariableReferenceDrawer.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Tools\Aligner.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Tasks\SetStatTask.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Damage\MDamager.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Camera\FreeLookCameraState.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Decisions\CheckStanceDecision.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Behaviors\SoundBehavior.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\GameObjectVar.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Mesh\ActiveMeshes.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Compatible StA\FPS\MMouseLook.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Mesh\MaterialLerp.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\ColorVar.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Mesh\BoneScaler.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Modes\ModifierDodge.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\AI\PointClick.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Decisions\CheckStateDecision.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\MCheckPoint.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Tags\Tags.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\AudioClipListVar.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Stats\Stats.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Interfaces\IAlign.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\MAIDecision.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Interfaces\IScene.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\Vector3VarListener.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Tools\MGameSettings.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Readme\Readme.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Tasks\PatrolTask.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Zone.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Aim\AimTarget.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\States\JumpBasic.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\AI\AIWanderArea.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Events\MalbersEvents.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Animator\BlinkEyes.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Decisions\ArriveDecision.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\AI\AITarget.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Reactions\GravityReaction.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Attributes Drawers\FlagAttribute.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\StringComparer.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Effects\SoundByMaterial.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Interfaces\IInteractable.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Camera\FreeLockCameraManager.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\MAnimalBrain.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Tools\Limb.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Decisions\CheckStatDecision.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Stats\ModifyStat.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Damage\MDisplayTrajectory.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\AI\MWayPoint.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Decisions\LookDecision.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Events\UnityEventRaiser.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Reactions\ForceReaction.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Tools\SlowMotion.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Decisions\ORDecision.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Reactions\MovementReaction.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\IntComparer.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Behaviors\RandomBehavior.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\IntVarListener.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Tags\AnimationTag.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Compatible StA\FPS\MHeadBob.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\BoolVar.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\MAIState.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Tools\SlowMotion.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Camera\MFreeLookCamera.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Interactions\MInteract.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Damage\SimpleThrow.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Input\MInput.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Reaction.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Damage\MExplosion.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\States\Jump.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\SpriteVar.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\MAnimalCallBacks.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Attributes Drawers\RequiredFieldAttribute.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Reactions\SpeedReaction.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Behaviors\CommentB.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\RunTime Collections\GetRuntimeGameObjects.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\RunTime Collections\RuntimeGameObjects.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\AI\FollowTargetExtended.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Modes\ModifierForce.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Tasks\SetTargetTask.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Mesh\BlendShapePreset.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Triggers\TriggerExit.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Effects\EffectModifier.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\FloatVar.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Tools\GravityChanger.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Effects\StepsManager.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\StringVar.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\MTools.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\ID\StatID.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Decisions\CheckModeDecision.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Behaviors\MessagesBehavior.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\States\State.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\AI\FollowTarget.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\Reactions\StanceReaction.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Tasks\WaitTask.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\ID\StanceID.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\States\Fly.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Stats\StatRandomizer.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Interfaces\IAIControl.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Tools\GlobalGravity.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Events\UnityEventExit.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Damage\MProjectile.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Attributes Drawers\MinMaxRangeAttribute.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Scriptables\RunTime Collections\AddRuntimeGameObjects.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Tasks\MoveStopTask.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\UI\UpVectorTransform.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Timeline\AnimatorMoveTimelineFixer.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Core\Attributes Drawers\CreateScriptableAssetAttribute.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Animal Controller\AI Brain\Decisions\ANDDecision.cs" />
      <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Aim\Aim.cs" />
-     <Compile Include="Assets\Malbers Animations\Common\Scripts\Input\MobileJoystick.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Tags\ITag.cs" />
+     <Compile Include="Assets\Malbers Animations\Common\Scripts\Utilities\Mesh\MaterialLerpSO.cs" />
      <None Include="Assets\Malbers Animations\Common\Shaders\Mask8Toon.shader" />
      <None Include="Assets\Malbers Animations\Common\Shaders\DragonEggs_Shader.shader" />
      <None Include="Assets\Malbers Animations\Common\Shaders\Color4x2.shader" />
@@ -543,11 +543,11 @@
      <Reference Include="CommandLine">
      <HintPath>E:/works/ET-EUI/Unity/Assets/Plugins/CommandLine.dll</HintPath>
      </Reference>
-     <Reference Include="clipper_library">
-     <HintPath>E:/works/ET-EUI/Unity/Library/PackageCache/com.unity.cinemachine@2.8.0/Runtime/ThirdParty/clipper_library.dll</HintPath>
-     </Reference>
      <Reference Include="ICSharpCode.SharpZipLib">
      <HintPath>E:/works/ET-EUI/Unity/Assets/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
+     </Reference>
+     <Reference Include="clipper_library">
+     <HintPath>E:/works/ET-EUI/Unity/Library/PackageCache/com.unity.cinemachine@2.8.0/Runtime/ThirdParty/clipper_library.dll</HintPath>
      </Reference>
      <Reference Include="mscorlib">
      <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.22f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -897,8 +897,14 @@
      <Reference Include="System.Xml.XPath.XDocument">
      <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.22f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.XDocument.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.ShaderGraph.Editor">
+     <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Shaders">
      <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Universal.Editor">
+     <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Runtime">
      <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
@@ -909,11 +915,23 @@
      <Reference Include="Unity.VisualStudio.Editor">
      <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+     <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Timeline.Editor">
+     <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Timeline">
      <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+     <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.TextMeshPro">
      <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Mathematics.Editor">
+     <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Searcher.Editor">
      <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
@@ -933,14 +951,20 @@
      <Reference Include="UnityEngine.UI">
      <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
      </Reference>
-     <Reference Include="UnityEngine.SpatialTracking">
-     <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+     <Reference Include="Unity.RenderPipelines.Core.Editor">
+     <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Mathematics">
      <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.ShaderGraph.Editor">
-     <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+     <Reference Include="UnityEngine.SpatialTracking">
+     <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
+     <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.SpatialTracking">
+     <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
      </Reference>
      <Reference Include="Cinemachine">
      <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
@@ -948,42 +972,18 @@
      <Reference Include="com.unity.cinemachine.editor">
      <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.RenderPipelines.Universal.Editor">
-     <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="UnityEngine.XR.LegacyInputHelpers">
      <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-     <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-     <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Timeline.Editor">
-     <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-     <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Mathematics.Editor">
-     <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEditor.SpatialTracking">
-     <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.Core.Editor">
-     <HintPath>E:/works/ET-EUI/Unity/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
-     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.Editor.csproj">
-      <Project>{041131cd-3018-19b1-81b6-5dbee2467ffb}</Project>
-      <Name>Unity.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.Mono.csproj">
       <Project>{5910fa29-5797-199c-985b-fc9fc473328e}</Project>
       <Name>Unity.Mono</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Editor.csproj">
+      <Project>{041131cd-3018-19b1-81b6-5dbee2467ffb}</Project>
+      <Name>Unity.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.ThirdParty.csproj">
       <Project>{d2ad5be1-263a-9a30-ab0f-dc5b08044350}</Project>
