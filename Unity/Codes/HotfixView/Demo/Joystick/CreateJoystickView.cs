@@ -12,7 +12,7 @@ namespace ET
             GameObject prefab = bundleGameObject.Get<GameObject>("Joystick");
 	        
             GameObject go = UnityEngine.Object.Instantiate(prefab, GlobalComponent.Instance.Global, true);
-            
+            args.ZoneScene.AddComponent<JoystickComponent>();
             // go.transform.position = args.Unit.Position;
             // args.Unit.AddComponent<GameObjectComponent>().GameObject = go;
             // args.Unit.AddComponent<AnimatorComponent>();
