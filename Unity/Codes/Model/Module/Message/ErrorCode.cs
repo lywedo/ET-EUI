@@ -23,5 +23,6 @@ namespace ET
         public const int ERR_TokenError = 200009;
         public const int ERR_RoleNameIsNull = 200010; //游戏角色名字为空
         public const int ERR_RoleNameSame = 200011;
+        public const int ERR_RoleNotExit = 200012; //游戏角色不存在
     }
 }

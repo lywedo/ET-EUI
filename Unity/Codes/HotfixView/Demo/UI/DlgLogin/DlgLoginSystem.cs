@@ -29,12 +29,21 @@ namespace ET
                 if (errorcode != ErrorCode.ERR_Success)
                 {
                     Log.Error(errorcode.ToString());
+                    return;
                 }
-                //TODO 显示登陆之后页面
+
+                errorcode = await LoginHelper.GetServerInfo(self.DomainScene());
+                if (errorcode != ErrorCode.ERR_Success)
+                {
+                    Log.Error(errorcode.ToString());
+                    return;
+                }
+                
                 self.DomainScene().GetComponent<UIComponent>().HideWindow(WindowID.WindowID_Login);
+                self.DomainScene().GetComponent<UIComponent>().ShowWindow(WindowID.WindowID_Server);
                 // self.DomainScene().GetComponent<UIComponent>().ShowWindow(WindowID.WindowID_Lobby);
-                await SceneChangeHelper.SceneChangeToTest(self.ZoneScene(), "ControllerScene", 1);
-                Game.EventSystem.Publish(new EventType.CreateJoystick(){ZoneScene = self.ZoneScene()});
+                // await SceneChangeHelper.SceneChangeToTest(self.ZoneScene(), "ControllerScene", 1);
+                // Game.EventSystem.Publish(new EventType.CreateJoystick(){ZoneScene = self.ZoneScene()});
             }
             catch (Exception e)
             {
