@@ -196,5 +196,36 @@ namespace ET
             zoneScene.GetComponent<RoleInfosComponent>().RoleInfos.RemoveAt(index);
             return ErrorCode.ERR_Success;
         }
+
+        public static async ETTask<int> GetRealmKey(Scene zoneScene)
+        {
+            A2C_GetRealKey a2CGetRealKey = null;
+            try
+            {
+                a2CGetRealKey = (A2C_GetRealKey)await zoneScene.GetComponent<SessionComponent>().Session.Call(new C2A_GetRealKey()
+                {
+                    Token = zoneScene.GetComponent<AccountInfoComponent>().Token,
+                    AccountId = zoneScene.GetComponent<AccountInfoComponent>().AccountId,
+                    ServerId = zoneScene.GetComponent<ServerInfosComponent>().CurrentServerId
+                });
+            }
+            catch (Exception e)
+            {
+                Log.Error(e.ToString());
+                return ErrorCode.ERR_NetorkError;
+            }
+
+            if (a2CGetRealKey.Error != ErrorCode.ERR_Success)
+            {
+                Log.Error(a2CGetRealKey.Error.ToString());
+                return a2CGetRealKey.Error;
+            }
+
+            zoneScene.GetComponent<AccountInfoComponent>().RealmKey = a2CGetRealKey.RealmKey;
+            zoneScene.GetComponent<AccountInfoComponent>().RealmAddress = a2CGetRealKey.ReamlmAddress;
+
+            await ETTask.CompletedTask;
+            return ErrorCode.ERR_Success;
+        }
     }
 }

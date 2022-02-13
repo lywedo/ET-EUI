@@ -732,4 +732,44 @@ namespace ET
 
 	}
 
+	[ResponseType(nameof(A2C_GetRealKey))]
+	[Message(OuterOpcode.C2A_GetRealKey)]
+	[ProtoContract]
+	public partial class C2A_GetRealKey: Object, IRequest
+	{
+		[ProtoMember(90)]
+		public int RpcId { get; set; }
+
+		[ProtoMember(1)]
+		public string Token { get; set; }
+
+		[ProtoMember(2)]
+		public int ServerId { get; set; }
+
+		[ProtoMember(3)]
+		public long AccountId { get; set; }
+
+	}
+
+	[Message(OuterOpcode.A2C_GetRealKey)]
+	[ProtoContract]
+	public partial class A2C_GetRealKey: Object, IResponse
+	{
+		[ProtoMember(90)]
+		public int RpcId { get; set; }
+
+		[ProtoMember(91)]
+		public int Error { get; set; }
+
+		[ProtoMember(92)]
+		public string Message { get; set; }
+
+		[ProtoMember(1)]
+		public string RealmKey { get; set; }
+
+		[ProtoMember(2)]
+		public string ReamlmAddress { get; set; }
+
+	}
+
 }

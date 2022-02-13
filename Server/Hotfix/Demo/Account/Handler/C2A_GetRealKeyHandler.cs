@@ -2,9 +2,9 @@
 
 namespace ET
 {
-    public class C2A_GetRolesHandler: AMRpcHandler<C2A_GetRoles, A2C_GetRoles>
+    public class C2A_GetRealKeyHandler : AMRpcHandler<C2A_GetRealKey, A2C_GetRealKey>
     {
-        protected override async ETTask Run(Session session, C2A_GetRoles request, A2C_GetRoles response, Action reply)
+        protected override async ETTask Run(Session session, C2A_GetRealKey request, A2C_GetRealKey response, Action reply)
         {
             if (session.DomainScene().SceneType != SceneType.Account)
             {
@@ -32,26 +32,25 @@ namespace ET
 
             using (session.AddComponent<SessionLockingComponent>())
             {
-                using (await CoroutineLockComponent.Instance.Wait(CoroutineLockType.CreateRoleLock, request.ServerId))
+                using (await CoroutineLockComponent.Instance.Wait(CoroutineLockType.LoginAccount, request.AccountId))
                 {
-                    var roleInfos = await DBManagerComponent.Instance.GetZoneDB(session.DomainZone()).Query<RoleInfo>(d=> d.AccountId == request.AccountId && d.ServerId == request.ServerId && d.State == (int)RoleInfoState.Normal);
-                    if (roleInfos == null || roleInfos.Count == 0)
+                    StartSceneConfig realmStartSceneConfig = RealmGateAddressHelper.GetRealm(request.ServerId);
+                    R2A_GetRealmKey r2AGetRealmKey = (R2A_GetRealmKey)await MessageHelper.CallActor(realmStartSceneConfig.InstanceId, new A2R_GetRealmKey() { AccountId = request.AccountId });
+                    if (r2AGetRealmKey.Error != ErrorCode.ERR_Success)
                     {
+                        response.Error = r2AGetRealmKey.Error;
                         reply();
+                        session?.Disconnect();
                         return;
                     }
 
-                    foreach (RoleInfo roleInfo in roleInfos)
-                    {
-                        response.RoleInfo.Add(roleInfo.ToMessage());
-                        roleInfo?.Dispose();
-                    }
-                    roleInfos.Clear();
+                    response.RealmKey = r2AGetRealmKey.RealmKey;
+                    response.ReamlmAddress = realmStartSceneConfig.OuterIPPort.ToString();
                     reply();
+                    session?.Disconnect();
+                    
                 }
             }
-
-            await ETTask.CompletedTask;
         }
     }
 }

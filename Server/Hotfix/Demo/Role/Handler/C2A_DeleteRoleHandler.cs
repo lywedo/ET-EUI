@@ -34,8 +34,8 @@ namespace ET
             {
                 using (await CoroutineLockComponent.Instance.Wait(CoroutineLockType.CreateRoleLock, request.AccountId))
                 {
-                    var roleInfos = await DBManagerComponent.Instance.GetZoneDB(request.ServerId).Query<RoleInfo>(info => info.Id == request.AccountId && info.ServerId == request.ServerId);
-                    if (roleInfos == null && roleInfos.Count <= 0)
+                    var roleInfos = await DBManagerComponent.Instance.GetZoneDB(request.ServerId).Query<RoleInfo>(info => info.Id == request.RoleInfoId && info.ServerId == request.ServerId);
+                    if (roleInfos == null || roleInfos.Count <= 0)
                     {
                         response.Error = ErrorCode.ERR_RoleNotExit;
                         reply();
