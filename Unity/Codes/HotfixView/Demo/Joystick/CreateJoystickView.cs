@@ -12,7 +12,12 @@ namespace ET
             GameObject prefab = bundleGameObject.Get<GameObject>("Joystick");
 	        
             GameObject go = UnityEngine.Object.Instantiate(prefab, GlobalComponent.Instance.Global, true);
-            args.ZoneScene.AddComponent<JoystickComponent>();
+            Log.Debug($"joystick:before {go}");
+            args.ZoneScene.AddComponent<JoystickComponent, GameObject>(go);
+            args.ZoneScene.AddComponent<PlayerMovementComponent>();
+            GameObject map = GameObject.Find("Map");
+            Log.Debug($"createjoy: {map}");
+            args.ZoneScene.AddComponent<FacingCameraCompont, GameObject>(map);
             // go.transform.position = args.Unit.Position;
             // args.Unit.AddComponent<GameObjectComponent>().GameObject = go;
             // args.Unit.AddComponent<AnimatorComponent>();

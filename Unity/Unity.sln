@@ -69,7 +69,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEditor.XR.LegacyInputH
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.ShaderGraph.Utilities", "Unity.ShaderGraph.Utilities.csproj", "{e379cc4a-07ca-e3e7-8188-50d8e1851b65}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Sprite.Editor", "Unity.2D.Sprite.Editor.csproj", "{a8309bda-81a0-0e11-d6b4-bfaf6da6450d}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Mathematics.Tests", "Unity.Mathematics.Tests.csproj", "{16b76928-80d7-3525-3f65-abb1479dad96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Sprite.Package.EditorTests", "Unity.2D.Sprite.Package.EditorTests.csproj", "{0e8dfda0-8601-e29d-2b1c-83b595ba0869}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Searcher.EditorTests", "Unity.Searcher.EditorTests.csproj", "{1502e028-abaf-bbf1-f733-589d09df6062}"
 EndProject
@@ -174,8 +178,12 @@ Global
 		{14de3350-78eb-531c-5018-4aa29ebd36bb}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{e379cc4a-07ca-e3e7-8188-50d8e1851b65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{e379cc4a-07ca-e3e7-8188-50d8e1851b65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{a8309bda-81a0-0e11-d6b4-bfaf6da6450d}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{a8309bda-81a0-0e11-d6b4-bfaf6da6450d}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16b76928-80d7-3525-3f65-abb1479dad96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{16b76928-80d7-3525-3f65-abb1479dad96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0e8dfda0-8601-e29d-2b1c-83b595ba0869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0e8dfda0-8601-e29d-2b1c-83b595ba0869}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1502e028-abaf-bbf1-f733-589d09df6062}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1502e028-abaf-bbf1-f733-589d09df6062}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9220ac58-c0b5-b868-ebe7-48531cf5e9fa}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

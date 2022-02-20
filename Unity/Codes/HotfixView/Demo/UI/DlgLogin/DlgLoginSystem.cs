@@ -12,6 +12,15 @@ namespace ET
         public static void RegisterUIEvent(this DlgLogin self)
         {
             self.View.E_LoginButton.AddListenerAsync(() => { return self.OnLoginClickHandler(); });
+            self.View.E_TestBtnButton.AddListenerAsync(() => { return self.OnTestClickHandler();});
+        }
+
+        public static async ETTask OnTestClickHandler(this DlgLogin self)
+        {
+            await SceneChangeHelper.SceneChangeToTest(self.ZoneScene(), "ControllerScene", 1);
+            Game.EventSystem.Publish(new EventType.CreateJoystick(){ZoneScene = self.DomainScene()});
+            self.DomainScene().GetComponent<UIComponent>().CloseWindow(WindowID.WindowID_Login);
+            
         }
 
         public static void ShowWindow(this DlgLogin self, Entity contextData = null)
