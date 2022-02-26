@@ -26,5 +26,7 @@ namespace ET
         public const int ERR_RoleNotExit = 200012; //游戏角色不存在
         public const int ERR_ConnectGateKeyError = 200013; //连接Gate的令牌错误
         public const int ERR_RequestSceneTypeError = 200014; //请求的Scene错误
+        public const int ERR_OtherAccountLogin = 200015; //请求的Scene错误
+
     }
 }

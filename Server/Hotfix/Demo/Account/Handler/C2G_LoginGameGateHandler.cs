@@ -52,7 +52,7 @@ namespace ET
                         return;
                     }
 
-                    Player player = scene.GetComponent<PlayerComponent>().Get(request.RoleId);
+                    Player player = scene.GetComponent<PlayerComponent>().Get(request.Account);
                     if (player == null)
                     {
                         //添加一个新的GateUnit
@@ -69,6 +69,7 @@ namespace ET
 
                     session.AddComponent<SessionPlayerComponent>().PlayerId = player.Id;
                     session.GetComponent<SessionPlayerComponent>().PlayerInstanceId = player.InstanceId;
+                    session.GetComponent<SessionPlayerComponent>().AccountId = player.Account;
                     player.SessionInstanceId = session.InstanceId;
                 }
 
