@@ -42,7 +42,15 @@
                         case PlayerState.Gate:
                             break;
                         case PlayerState.Game:
-                            //TODO 通知游戏逻辑服下线Unit角色逻辑，并将数据存入数据库
+                            //通知游戏逻辑服下线Unit角色逻辑，并将数据存入数据库
+                            M2G_RequestExitGame m2GRequestExitGame =(M2G_RequestExitGame) await MessageHelper.CallLocationActor(player.UnitId, new G2M_RequestExitGame());
+                            //通知移除账号角色登录信息
+                            long loginCenterInstanceId = StartSceneConfigCategory.Instance.LoginCenterConfig.InstanceId;
+                            L2G_RemoveLoginRecord l2GRemoveLoginRecord = (L2G_RemoveLoginRecord)await MessageHelper.CallActor(loginCenterInstanceId, new G2L_RemoveLoginRecord()
+                            {
+                               AccountId = player.Account,
+                               ServerId = player.DomainZone()
+                            });
                             break;
                     }
                 }
