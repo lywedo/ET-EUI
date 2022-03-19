@@ -9,6 +9,7 @@
         WindowID_RedDot,   //红点测试界面
         WindowID_Helper,   //提示界面
         WindowID_Server,     //服务器列表界面
-        WindowID_Roles      //选择角色界面
+        WindowID_Roles,      //选择角色界面
+        WindowId_Main,
     }
 }

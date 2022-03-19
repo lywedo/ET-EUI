@@ -261,11 +261,11 @@ namespace ET
             
             //开始连接gate
             long currentRoleId = zoneScene.GetComponent<RoleInfosComponent>().CurrentRoleId;
-            G2C_LoginGate g2CLoginGate = null;
+            G2C_LoginGameGate g2CLoginGate = null;
             try
             {
                 long accountId = zoneScene.GetComponent<AccountInfoComponent>().AccountId;
-                g2CLoginGate = (G2C_LoginGate)await gateSession.Call(new C2G_LoginGameGate()
+                g2CLoginGate = (G2C_LoginGameGate)await gateSession.Call(new C2G_LoginGameGate()
                 {
                     Key = r2CLoginRealm.GateSessionKey, Account = accountId, RoleId = currentRoleId
                 });
@@ -304,6 +304,7 @@ namespace ET
             }
             
             Log.Debug("角色进入游戏成功");
+            zoneScene.GetComponent<PlayerComponent>().MyId = g2CEnterGame.MyId;
             
             return ErrorCode.ERR_Success;
         }

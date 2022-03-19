@@ -41,7 +41,7 @@ namespace ET
                         return;
                     }
                     //通知登陆中心服 记录本次登陆的服务器zone
-                    StartSceneConfig loginCenterConfig = StartSceneConfigCategory.Instance.LocationConfig;
+                    StartSceneConfig loginCenterConfig = StartSceneConfigCategory.Instance.LoginCenterConfig;
                     L2G_AddLoginRecord l2GAddLoginRecord = (L2G_AddLoginRecord)await MessageHelper.CallActor(loginCenterConfig.InstanceId,
                         new G2L_AddLoginRecord() { AccountId = request.Account, ServerId = scene.Zone });
                     if (l2GAddLoginRecord.Error != ErrorCode.ERR_Success)
