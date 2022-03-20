@@ -77,8 +77,9 @@ namespace ET
 
                     session.AddComponent<SessionPlayerComponent>().PlayerId = player.Id;
                     session.GetComponent<SessionPlayerComponent>().PlayerInstanceId = player.InstanceId;
-                    session.GetComponent<SessionPlayerComponent>().AccountId = player.Account;
-                    player.SessionInstanceId = session.InstanceId;
+                    session.GetComponent<SessionPlayerComponent>().AccountId = request.Account;
+                    // player.SessionInstanceId = session.InstanceId;
+                    player.ClientSession = session;
                 }
 
                 reply();

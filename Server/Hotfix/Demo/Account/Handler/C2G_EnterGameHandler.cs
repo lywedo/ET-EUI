@@ -90,7 +90,8 @@ namespace ET
                         // Unit unit = UnitFactory.Create(gateMapComponent.Scene, player.Id, UnitType.Player);
                         //从数据库或者缓存中加载出Unit实体及相关组件
                         (bool isNewPlayer, Unit unit) = await UnitHelper.LoadUnit(player);
-                        unit.AddComponent<UnitGateComponent, long>(session.InstanceId);
+                        // unit.AddComponent<UnitGateComponent, long>(session.InstanceId); //当顶号后，session就归0了
+                        unit.AddComponent<UnitGateComponent, long>(player.InstanceId);
                         
                         //玩家Unit上线后的初始化操作
                         await UnitHelper.InitUnit(unit, isNewPlayer);

@@ -20,9 +20,9 @@ namespace ET
 				unit.AddComponent(entity);
 			}
 			
-			unit.AddComponent<MoveComponent>();
-			unit.AddComponent<PathfindingComponent, string>(scene.Name);
-			unit.Position = new Vector3(-10, 0, -10);
+			// unit.AddComponent<MoveComponent>();  //mmorpg
+			// unit.AddComponent<PathfindingComponent, string>(scene.Name); //mmorpg
+			// unit.Position = new Vector3(-10, 0, -10); //mmorpg
 			
 			unit.AddComponent<MailBoxComponent>();
 			
@@ -32,7 +32,7 @@ namespace ET
 			MessageHelper.SendToClient(unit, m2CCreateUnits);
 			
 			// 加入aoi
-			unit.AddComponent<AOIEntity, int, Vector3>(9 * 1000, unit.Position);
+			// unit.AddComponent<AOIEntity, int, Vector3>(9 * 1000, unit.Position); //mmorpg
 
 			response.NewInstanceId = unit.InstanceId;
 			

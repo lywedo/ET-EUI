@@ -19,7 +19,7 @@ namespace ET
                 // playerComponent.Remove(accountId);
                 // gateUnit.Dispose();//临时处理
                 scene.GetComponent<GateSessionKeyComponent>().Remove(accountId);
-                Session gateSession = Game.EventSystem.Get(player.SessionInstanceId) as Session;
+                Session gateSession = Game.EventSystem.Get(player.ClientSession.InstanceId) as Session;
                 if (gateSession != null && !gateSession.IsDisposed)
                 {
                     if (gateSession.GetComponent<SessionPlayerComponent>() != null)
@@ -30,7 +30,7 @@ namespace ET
                     gateSession?.Disconnect().Coroutine();
                 }
 
-                player.SessionInstanceId = 0;
+                // player.SessionInstanceId = 0;
                 player.AddComponent<PlayerOfflineOutTimeComponent>();
             }
 
