@@ -231,9 +231,9 @@
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.5\Editor\ShaderGraph\Targets\UniversalTarget.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.5\Editor\Lighting\UniversalRenderPipelineLightUI.Drawers.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.5\Editor\RendererFeatures\DecalRendererFeatureEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.5\Editor\2D\ShapeEditor\Selection\PointRectSelector.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.5\Editor\AssetPostProcessors\ThreeDSMaterialDescriptionPostprocessor.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.5\Editor\2D\ShaderGraph\Targets\UniversalSpriteLitSubTarget.cs" />
-    <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.5\Editor\2D\ShapeEditor\Selection\PointRectSelector.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.5\Editor\AssetPostProcessors\MaterialPostprocessor.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.5\Editor\UniversalRenderPipelineAsset\SerializedUniversalRenderPipelineAsset.cs" />
     <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.5\Editor\Decal\DecalShaderGraphGUI.cs" />

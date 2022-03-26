@@ -131,8 +131,8 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Generation\Targets\BuiltIn\Editor\ShaderPreprocessor.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Interfaces\IMayRequireScreenPosition.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Graphs\MinimalGraphData.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Input\Scene\FogNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Utility\Logic\IsInfiniteNode.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Input\Scene\FogNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Drawing\Inspector\InspectorView.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Drawing\Interfaces\ISGViewModel.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Graphs\StickyNoteData.cs" />
@@ -175,8 +175,8 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\MeshDeformation\ComputeDeformNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Graphs\GraphSetup.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\RedirectNode.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\DefaultShaderIncludes.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Math\Advanced\ReciprocalNode.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\DefaultShaderIncludes.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Graphs\AbstractShaderProperty.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Artistic\Normal\NormalReconstructZNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Drawing\Controls\Texture3DControl.cs" />
@@ -225,8 +225,8 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Generation\Collections\IncludeCollection.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Generation\Attributes\GenerateBlocksAttribute.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Generation\Utils\TargetUtils.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Input\Scene\ObjectNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Interfaces\IGeneratesFunction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Input\Scene\ObjectNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Util\PrecisionUtil.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Math\Advanced\NormalizeNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Generation\Descriptors\KeywordDescriptor.cs" />
@@ -541,8 +541,8 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Graphs\ParentGroupChange.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Graphs\DataStore.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Input\Scene\ScreenNode.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Drawing\SearchWindowAdapter.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Input\Texture\TexelSizeNode.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Drawing\SearchWindowAdapter.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Graphs\CategoryData.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Utility\Logic\OrNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Util\CopyPasteGraph.cs" />
@@ -602,8 +602,8 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Importers\ShaderGraphAssetPostProcessor.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Util\SlotValueTypeUtil.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Graphs\DynamicVectorMaterialSlot.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Math\Interpolation\LerpNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Generation\Processors\ShaderSpliceUtil.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Math\Interpolation\LerpNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\ContextData.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Artistic\Normal\NormalFromTextureNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Math\Round\RoundNode.cs" />
@@ -620,8 +620,8 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Legacy\SlotReference0.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Graphs\Vector1MaterialSlot.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Generation\Descriptors\PragmaDescriptor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Drawing\ViewModels\InspectorViewModel.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Input\Texture\SampleRawCubemapNode.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Drawing\ViewModels\InspectorViewModel.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Legacy\SpriteUnlitMasterNode1.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\ShaderGraphProjectSettings.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Interfaces\PositionSource.cs" />

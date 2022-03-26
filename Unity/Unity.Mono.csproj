@@ -161,12 +161,12 @@
     <Compile Include="Assets\Mono\ILRuntime\Generate\System_Collections_IEnumerator_Binding.cs" />
     <Compile Include="Assets\Mono\ILRuntime\Generate\System_Collections_Generic_List_1_Int64_Binding.cs" />
     <Compile Include="Assets\Mono\Core\Helper\MD5Helper.cs" />
+    <Compile Include="Assets\Mono\ILRuntime\Generate\UnityEngine_Vector2_Binding.cs" />
     <Compile Include="Assets\Mono\ILRuntime\Generate\System_Collections_Generic_Dictionary_2_String_Dictionary_2_String_Ob.cs" />
     <Compile Include="Assets\Mono\Module\Network\AService.cs" />
     <Compile Include="Assets\Mono\ILRuntime\Generate\UnityEngine_AssetBundleCreateRequest_Binding.cs" />
     <Compile Include="Assets\Mono\Core\Helper\ObjectHelper.cs" />
     <Compile Include="Assets\Mono\ILRuntime\Generate\System_Collections_Generic_List_1_String_Binding_Enumerator_Binding.cs" />
-    <Compile Include="Assets\Mono\ILRuntime\Generate\UnityEngine_Vector2_Binding.cs" />
     <Compile Include="Assets\Mono\ILRuntime\Generate\System_IO_Path_Binding.cs" />
     <Compile Include="Assets\Mono\ILRuntime\Generate\UnityEngine_UI_Toggle_Binding.cs" />
     <Compile Include="Assets\Mono\ILRuntime\Generate\UnityEngine_Object_Binding.cs" />
@@ -365,8 +365,8 @@
     <Compile Include="Assets\Mono\Module\Mongo\BsonIgnoreIfNullAttribute.cs" />
     <Compile Include="Assets\Mono\Module\Network\ErrorCore.cs" />
     <Compile Include="Assets\Mono\ILRuntime\Generate\System_IO_MemoryStream_Binding.cs" />
-    <Compile Include="Assets\Mono\ILRuntime\Generate\System_Collections_Generic_HashSet_1_ILTypeInstance_Binding_Enumerato.cs" />
     <Compile Include="Assets\Mono\ILRuntime\Generate\UnityEngine_Animator_Binding.cs" />
+    <Compile Include="Assets\Mono\ILRuntime\Generate\System_Collections_Generic_HashSet_1_ILTypeInstance_Binding_Enumerato.cs" />
     <Compile Include="Assets\Mono\ILRuntime\Generate\System_Collections_Generic_HashSet_1_AService_Binding_Enumerator_Bind.cs" />
     <Compile Include="Assets\Mono\Define.cs" />
   </ItemGroup>
