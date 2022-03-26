@@ -6,13 +6,11 @@ namespace ET
     {
         protected override async ETTask Run(NumbericChange args)
         {
-            Log.Debug($"Numeric");
             if (!(args.Parent is Unit unit))
             {
                 return;
             }
             unit.GetComponent<NumericNoticeComponent>()?.NoticeImmediately(args);
-
             await ETTask.CompletedTask;
         }
     }

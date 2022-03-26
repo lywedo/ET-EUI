@@ -11,7 +11,6 @@ namespace ET
             self.NoticeUnitNumericMessage.NumericType = args.NumericType;
             self.NoticeUnitNumericMessage.NewValue = args.New;
             MessageHelper.SendToClient(unit, self.NoticeUnitNumericMessage);
-            Log.Debug($"Numeric");
         }
     }
 }
