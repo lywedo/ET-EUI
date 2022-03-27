@@ -44,6 +44,13 @@
 	    public const int HpPct = Hp * 10 + 3;
 	    public const int HpFinalAdd = Hp * 10 + 4;
 	    public const int HpFinalPct = Hp * 10 + 5;
+	    
+	    public const int Mp = 1014; 
+	    public const int MpBase = Mp * 10 + 1;
+	    public const int MpAdd = Mp * 10 + 2;
+	    public const int MpPct = Mp * 10 + 3;
+	    public const int MpFinalAdd = Mp * 10 + 4;
+	    public const int MpFinalPct = Mp * 10 + 5;
 
 	    public const int Armor = 1015; //护甲
 	    public const int ArmorBase = Armor * 10 + 1;

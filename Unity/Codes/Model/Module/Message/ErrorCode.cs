@@ -33,5 +33,8 @@ namespace ET
         public const int ERR_SessionStateError = 200019;
         public const int ERR_EnterGameError = 200020;
         public const int ERR_ReEnterGameError = 200021;
+        public const int ERR_NumericTypeNotExit = 200022;
+        public const int ERR_NumericTypeNotAddPoint = 200023;
+        public const int ERR_AddPointNotEnough = 200024;
     }
 }
