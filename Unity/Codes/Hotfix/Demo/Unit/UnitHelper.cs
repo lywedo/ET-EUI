@@ -17,7 +17,8 @@
 
         public static NumericComponent GetMyUnitNumericComponent(Scene currentScene)
         {
-            return currentScene.Parent.Parent.GetComponent<NumericComponent>();
+            return GetMyUnitFromCurrentScene(currentScene).GetComponent<NumericComponent>();
+            // return currentScene.Parent.Parent.GetComponent<NumericComponent>();
         }
     }
 }
