@@ -5,7 +5,7 @@ namespace ET
 {
     public class CreateJoystickView: AEvent<EventType.CreateJoystick>
     {
-        protected override async ETTask Run(CreateJoystick args)
+        protected override async void Run(CreateJoystick args)
         {
             await ResourcesComponent.Instance.LoadBundleAsync("Joystick.unity3d");
             GameObject bundleGameObject = (GameObject)ResourcesComponent.Instance.GetAsset("Joystick.unity3d", "Joystick");
