@@ -22,7 +22,7 @@ namespace ET
 
             if (args.NumericType == NumericType.PhysicalStrength)
             {
-                unit.GetComponent<NumericComponent>()[NumericType.HpPct] += 1 * 10000;
+                unit.GetComponent<NumericComponent>()[NumericType.MaxHpPct] += 1 * 10000;
             }
 
             if (args.NumericType == NumericType.Agile)

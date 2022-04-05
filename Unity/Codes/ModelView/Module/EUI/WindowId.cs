@@ -12,6 +12,7 @@
         WindowID_Roles,      //选择角色界面
         WindowID_Main,
         WindowID_Loading,
-        WindowID_RoleInfo
+        WindowID_RoleInfo,
+        WindowID_Adventure
     }
 }

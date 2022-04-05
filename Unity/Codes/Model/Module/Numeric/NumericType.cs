@@ -75,5 +75,10 @@
 	    public const int Position = 3010;
 	    public const int Height = 3011;
 	    public const int Weight = 3012;
+
+	    public const int AdventureState = 3010; //关卡冒险状态
+	    public const int DyingState = 3011; //垂死状态
+	    public const int AdventureStarTime = 3012; //关卡开始冒险的时间
+	    public const int IsAlive = 3013; //存活状态 0为死亡 1为活着
     }
 }
