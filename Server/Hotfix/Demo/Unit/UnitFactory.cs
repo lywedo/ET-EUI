@@ -15,7 +15,9 @@ namespace ET
                     Unit unit = unitComponent.AddChildWithId<Unit, int>(id, 1001);
                     // unit.AddComponent<MoveComponent>(); mmorpg才用得到
                     // unit.Position = new Vector3(-10, 0, -10); mmorpg才用得到
-			
+                    //ChildType测试代码 取消注释 编译Server.hotfix 可发现报错
+                    //unitComponent.AddChild<Player, string>("Player");
+
                     NumericComponent numericComponent = unit.AddComponent<NumericComponent>();
                     // numericComponent.Set(NumericType.Speed, 6f); // 速度是6米每秒 mmorpg才用得到
                     // numericComponent.Set(NumericType.AOI, 15000); // 视野15米 mmorpg才用得到
