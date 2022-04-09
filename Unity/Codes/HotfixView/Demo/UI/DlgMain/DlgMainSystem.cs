@@ -12,6 +12,7 @@ namespace ET
 		public static void RegisterUIEvent(this DlgMain self)
 		{
 			self.View.E_RoleButton.AddListenerAsync(() => { return self.OnRoleButtonClickHandler();});
+			self.View.E_AdventureButton.AddListenerAsync(() => { return self.OnAdventureClickHandler();});
 		}
 
 		public static void ShowWindow(this DlgMain self, Entity contextData = null)
@@ -27,6 +28,12 @@ namespace ET
 			self.View.E_RoleLevelText.SetText($"Lv.{numericComponent.GetAsInt((int)NumericType.Level)}");
 			self.View.E_GoldText.SetText(numericComponent.GetAsInt((int)NumericType.Gold).ToString());
 			self.View.E_ExpText.SetText(numericComponent.GetAsInt((int)NumericType.Exp).ToString());
+			await ETTask.CompletedTask;
+		}
+
+		public static async ETTask OnAdventureClickHandler(this DlgMain self)
+		{
+			self.ZoneScene().GetComponent<UIComponent>().ShowWindow(WindowID.WindowID_Adventure);
 			await ETTask.CompletedTask;
 		}
 

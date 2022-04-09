@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7782213688221888649}
   - component: {fileID: 4501591279149613248}
   m_Layer: 0
-  m_Name: ninja
+  m_Name: Ninja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -2,9 +2,9 @@
 
 namespace ET
 {
-    public class SceneChangeFinish_StartAdventure: AEvent<EventType.SceneChangeFinish>
+    public class SceneChangeFinish_StartAdventure: AEventAsync<EventType.SceneChangeFinish>
     {
-        protected override async void Run(SceneChangeFinish args)
+        protected override async ETTask Run(SceneChangeFinish args)
         {
             Unit unit = UnitHelper.GetMyUnitFromCurrentScene(args.CurrentScene);
             if (unit.GetComponent<NumericComponent>().GetAsInt(NumericType.AdventureState) == 0)
