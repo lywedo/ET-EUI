@@ -54,12 +54,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Analyzer Include="D:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
-    <Analyzer Include="D:\works\ET-EUI\Unity\Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll" />
-    <Analyzer Include="D:\works\ET-EUI\Unity\Assets\Plugins\Demigiant\DemiLib\Core\DemiLib.dll" />
-    <Analyzer Include="D:\works\ET-EUI\Unity\Assets\Plugins\Demigiant\DemiLib\Core\Editor\DemiEditor.dll" />
-    <Analyzer Include="D:\works\ET-EUI\Unity\Assets\Plugins\Demigiant\DOTweenPro\Editor\DOTweenProEditor.dll" />
-    <Analyzer Include="D:\works\ET-EUI\Unity\Assets\Plugins\Demigiant\DOTweenPro\DOTweenPro.dll" />
-    <Analyzer Include="D:\works\ET-EUI\Unity\Assets\Plugins\Demigiant\DOTween\DOTween.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Res\FantasyIconsPackFree\Demo\IconViewer.cs" />
@@ -314,6 +308,9 @@
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.2.15f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
+    <Reference Include="DemiLib">
+      <HintPath>Assets\Plugins\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst.Unsafe">
       <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
@@ -329,6 +326,9 @@
     <Reference Include="Unity.Burst.Cecil">
       <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
     </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst.Cecil.Rocks">
       <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
     </Reference>
@@ -337,12 +337,6 @@
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>Assets\Plugins\ICSharpCode.SharpZipLib.dll</HintPath>
-    </Reference>
-    <Reference Include="DemiLib">
-      <HintPath>Assets\Plugins\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween">
-      <HintPath>Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
     </Reference>
     <Reference Include="DOTweenPro">
       <HintPath>Assets\Plugins\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
