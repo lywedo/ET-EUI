@@ -4,7 +4,7 @@ namespace ET
 {
     public static class UnitFactory
     {
-        public static Unit Create(Scene currentScene, UnitInfo unitInfo)
+        public static async ETTask<Unit> Create(Scene currentScene, UnitInfo unitInfo)
         {
 	        UnitComponent unitComponent = currentScene.GetComponent<UnitComponent>();
 	        Unit unit = unitComponent.AddChildWithId<Unit, int>(unitInfo.UnitId, unitInfo.ConfigId);
@@ -41,7 +41,7 @@ namespace ET
 
 	        // unit.AddComponent<XunLuoPathComponent>(); //mmorpg
 	        
-	        Game.EventSystem.Publish(new EventType.AfterUnitCreate() {Unit = unit});
+	        await Game.EventSystem.PublishAsync(new EventType.AfterUnitCreate() {Unit = unit});
             return unit;
         }
 

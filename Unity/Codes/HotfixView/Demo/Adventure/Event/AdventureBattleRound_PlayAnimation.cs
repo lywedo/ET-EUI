@@ -3,14 +3,16 @@ using UnityEngine;
 
 namespace ET
 {
-    public class AdventureBattleRound_PlayAnimation: AEvent<AdventureBattleRound>
+    public class AdventureBattleRound_PlayAnimation: AEventAsync<AdventureBattleRoundView>
     {
-        protected override async void Run(AdventureBattleRound args)
+        protected override async ETTask Run(AdventureBattleRoundView args)
         {
+            Log.Console($"AdventureBattleRound:{args.AttackUnit.Type}  {args.TargetUnit.Type}");
             if (!args.AttackUnit.IsAlive() || !args.TargetUnit.IsAlive())
             {
                 return;
             }
+            Log.Console($"AdventureBattleRound:{args.AttackUnit.Type}  {args.TargetUnit.Type}");
             args.AttackUnit?.GetComponent<AnimatorComponent>().Play(MotionType.Attack);
             args.TargetUnit?.GetComponent<AnimatorComponent>().Play(MotionType.Hurt);
 

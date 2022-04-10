@@ -46,7 +46,8 @@ namespace ET
 			scrollItemAdventure.EButton_enterButton.SetVisible(unitLevel >= config.MiniEnterLevel[0] && !isInAdventure);
 			scrollItemAdventure.ELabel_inAdventureTipText.SetVisible(unitLevel >= config.MiniEnterLevel[0] && isInAdventure);
 			scrollItemAdventure.ELabel_notEnoughText.SetVisible(unitLevel < config.MiniEnterLevel[0]);
-			scrollItemAdventure.ELabel_LevelText.SetText($"{config.Name} Lv.{config.MiniEnterLevel[0]}~Lv.{config.MiniEnterLevel[1]}");
+			scrollItemAdventure.ELabel_NameText.SetText($"{config.Name}");
+			scrollItemAdventure.ELabel_LevelText.SetText($"Lv.{config.MiniEnterLevel[0]}~Lv.{config.MiniEnterLevel[1]}");
 			scrollItemAdventure.EButton_enterButton.AddListenerAsync(() => { return self.OnStartGameLevelClickHandler(config.Id);});
 		}
 
@@ -57,6 +58,10 @@ namespace ET
 				int errorCode = await AdventureHelper.RequestStartGameLevel(self.ZoneScene(), levelId);
 				if (errorCode != ErrorCode.ERR_Success)
 				{
+					if (errorCode == ErrorCode.ERR_AdventureInDying)
+					{
+						self.ZoneScene().GetComponent<UIComponent>().ShowWindow(WindowID.WindowID_Dying);
+					}
 					return;
 				}
 				// self.Refresh();

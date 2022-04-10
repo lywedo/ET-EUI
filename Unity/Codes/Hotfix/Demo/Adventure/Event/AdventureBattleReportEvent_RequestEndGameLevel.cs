@@ -2,9 +2,9 @@
 
 namespace ET
 {
-    public class AdventureBattleReportEvent_RequestEndGameLevel: AEvent<AdventureBattleReport>
+    public class AdventureBattleReportEvent_RequestEndGameLevel: AEventAsync<AdventureBattleReport>
     {
-        protected override async void Run(AdventureBattleReport args)
+        protected override async ETTask Run(AdventureBattleReport args)
         {
             if (args.BattleRoundResult == BattleRoundResult.KeepBattle)
             {
@@ -18,6 +18,7 @@ namespace ET
             }
 
             await TimerComponent.Instance.WaitAsync(3000);
+            args.ZoneScene?.CurrentScene()?.GetComponent<AdventureComponent>()?.ShowAdventureBpBarInfo(false);
             args.ZoneScene?.CurrentScene()?.GetComponent<AdventureComponent>()?.ResetAdventure();
         }
     }

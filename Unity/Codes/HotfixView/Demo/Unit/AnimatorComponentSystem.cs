@@ -115,6 +115,7 @@ namespace ET
 
 		public static void Play(this AnimatorComponent self, MotionType motionType, float motionSpeed = 1f)
 		{
+			Log.Console($"play: {self.GetParent<Unit>().Type} {motionType}");
 			if (!self.HasParameter(motionType.ToString()))
 			{
 				return;

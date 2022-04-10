@@ -131,8 +131,8 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Generation\Targets\BuiltIn\Editor\ShaderPreprocessor.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Interfaces\IMayRequireScreenPosition.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Graphs\MinimalGraphData.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Utility\Logic\IsInfiniteNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Input\Scene\FogNode.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Utility\Logic\IsInfiniteNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Drawing\Inspector\InspectorView.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Drawing\Interfaces\ISGViewModel.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Graphs\StickyNoteData.cs" />

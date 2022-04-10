@@ -19,7 +19,7 @@
             // 等待CreateMyUnit的消息
             WaitType.Wait_CreateMyUnit waitCreateMyUnit = await zoneScene.GetComponent<ObjectWait>().Wait<WaitType.Wait_CreateMyUnit>();
             M2C_CreateMyUnit m2CCreateMyUnit = waitCreateMyUnit.Message;
-            Unit unit = UnitFactory.Create(currentScene, m2CCreateMyUnit.Unit);
+            Unit unit = await UnitFactory.Create(currentScene, m2CCreateMyUnit.Unit);
             unitComponent.Add(unit);
 
             await TimerComponent.Instance.WaitAsync(2000);
@@ -45,7 +45,7 @@
             // 等待CreateMyUnit的消息
             // WaitType.Wait_CreateMyUnit waitCreateMyUnit = await zoneScene.GetComponent<ObjectWait>().Wait<WaitType.Wait_CreateMyUnit>();
             // M2C_CreateMyUnit m2CCreateMyUnit = waitCreateMyUnit.Message;
-            Unit unit = UnitFactory.Create(currentScene, new UnitInfo());
+            Unit unit = await UnitFactory.Create(currentScene, new UnitInfo());
             unitComponent.Add(unit);
             
             // zoneScene.RemoveComponent<AIComponent>();

@@ -13,6 +13,7 @@
         WindowID_Main,
         WindowID_Loading,
         WindowID_RoleInfo,
-        WindowID_Adventure
+        WindowID_Adventure,
+        WindowID_Dying
     }
 }
