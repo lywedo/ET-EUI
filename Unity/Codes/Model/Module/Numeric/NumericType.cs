@@ -61,6 +61,13 @@
 
 	    public const int AdditionalArmor = 1016; //护甲追加
 
+	    public const int Dodge = 1017; //闪避
+	    public const int DodgeBase = Dodge * 10 + 1;
+	    public const int DodgeAdd = Dodge * 10 + 2;
+	    public const int DodgePct = Dodge * 10 + 3;
+	    public const int DodgeFinalAdd = Dodge * 10 + 4;
+	    public const int DodgeFInalPct = Dodge * 10 + 5;
+
 	    public const int Power = 3001; //力量
 	    public const int PhysicalStrength = 3002; //体力
 	    public const int Agile = 3003; //敏捷值
@@ -80,5 +87,7 @@
 	    public const int DyingState = 3011; //垂死状态 0为垂死
 	    public const int AdventureStarTime = 3012; //关卡开始冒险的时间
 	    public const int IsAlive = 3013; //存活状态 0为死亡 1为活着
+
+	    public const int BattleRandomSeed = 3014; //战斗随机数种子
     }
 }

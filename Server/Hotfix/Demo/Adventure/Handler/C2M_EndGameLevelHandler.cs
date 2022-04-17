@@ -16,7 +16,7 @@ namespace ET
                 reply();
                 return;
             }
-            
+
             //检测上传的回合数是否正常
             if (request.Round <= 0)
             {
@@ -26,7 +26,7 @@ namespace ET
             }
 
             //战斗失败直接进入垂死状态
-            if (request.BattleResult == (int)BattleRoundResult.LoseBattle)
+            if (request.BattleResult == (int) BattleRoundResult.LoseBattle)
             {
                 numericComponent.Set(NumericType.DyingState, 1);
                 numericComponent.Set(NumericType.AdventureState, 0);
@@ -40,7 +40,7 @@ namespace ET
                 reply();
                 return;
             }
-            
+
             //检测战斗胜利结果是否正常
             if (!unit.GetComponent<AdventureCheckComponent>().CheckBattleWinResult(request.Round))
             {
@@ -48,10 +48,13 @@ namespace ET
                 reply();
                 return;
             }
-            
+
             numericComponent.Set(NumericType.AdventureState, 0);
             reply();
             
+            //战斗胜利增加经验值
+            numericComponent[NumericType.Exp] += BattleLevelConfigCategory.Instance.Get(levelId).RewardExp;
+
             //TODO 下发闯关成功的奖励
             await ETTask.CompletedTask;
         }

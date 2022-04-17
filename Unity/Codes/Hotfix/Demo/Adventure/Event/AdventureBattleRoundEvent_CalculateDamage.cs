@@ -11,9 +11,14 @@ namespace ET
                 return;
             }
 
-            int damage = args.AttackUnit.GetComponent<NumericComponent>().GetAsInt(NumericType.DamageValue);
-            int HP = args.TargetUnit.GetComponent<NumericComponent>().GetAsInt(NumericType.Hp);
-            HP -= damage;
+            SRandom random = args.ZoneScene.CurrentScene().GetComponent<AdventureComponent>().Random;
+
+            int damage = DamageCalcuateHelper.CalcuateDamageValue(args.AttackUnit, args.TargetUnit, ref random);
+
+            // int damage = args.AttackUnit.GetComponent<NumericComponent>().GetAsInt(NumericType.DamageValue);
+            // int HP = args.TargetUnit.GetComponent<NumericComponent>().GetAsInt(NumericType.Hp);
+            int HP = args.TargetUnit.GetComponent<NumericComponent>().GetAsInt(NumericType.Hp) - damage;
+            // HP -= damage;
             if (HP <= 0)
             {
                 HP = 0;

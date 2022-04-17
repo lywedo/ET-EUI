@@ -22,6 +22,57 @@ namespace ET
      		}
      	}
 
+		public UnityEngine.UI.Button EButton_UpLevelButton
+     	{
+     		get
+     		{
+     			if (this.uiTransform == null)
+     			{
+     				Log.Error("uiTransform is null.");
+     				return null;
+     			}
+     			if( this.m_EButton_UpLevelButton == null )
+     			{
+		    		this.m_EButton_UpLevelButton = UIFindHelper.FindDeepChild<UnityEngine.UI.Button>(this.uiTransform.gameObject,"BackGround/TopBackGround/EButton_UpLevel");
+     			}
+     			return this.m_EButton_UpLevelButton;
+     		}
+     	}
+
+		public UnityEngine.UI.Image EButton_UpLevelImage
+     	{
+     		get
+     		{
+     			if (this.uiTransform == null)
+     			{
+     				Log.Error("uiTransform is null.");
+     				return null;
+     			}
+     			if( this.m_EButton_UpLevelImage == null )
+     			{
+		    		this.m_EButton_UpLevelImage = UIFindHelper.FindDeepChild<UnityEngine.UI.Image>(this.uiTransform.gameObject,"BackGround/TopBackGround/EButton_UpLevel");
+     			}
+     			return this.m_EButton_UpLevelImage;
+     		}
+     	}
+
+		public UnityEngine.UI.Text ELabel_Text
+     	{
+     		get
+     		{
+     			if (this.uiTransform == null)
+     			{
+     				Log.Error("uiTransform is null.");
+     				return null;
+     			}
+     			if( this.m_ELabel_Text == null )
+     			{
+		    		this.m_ELabel_Text = UIFindHelper.FindDeepChild<UnityEngine.UI.Text>(this.uiTransform.gameObject,"BackGround/TopBackGround/EButton_UpLevel/ELabel_");
+     			}
+     			return this.m_ELabel_Text;
+     		}
+     	}
+
 		public ES_AttributeItem ES_AttributeItem
      	{
      		get
@@ -165,6 +216,9 @@ namespace ET
 		public void DestroyWidget()
 		{
 			this.m_E_CombatEffectivenessText = null;
+			this.m_EButton_UpLevelButton = null;
+			this.m_EButton_UpLevelImage = null;
+			this.m_ELabel_Text = null;
 			this.m_es_attributeitem?.Dispose();
 			this.m_es_attributeitem = null;
 			this.m_es_attributeitem1?.Dispose();
@@ -181,6 +235,9 @@ namespace ET
 		}
 
 		private UnityEngine.UI.Text m_E_CombatEffectivenessText = null;
+		private UnityEngine.UI.Button m_EButton_UpLevelButton = null;
+		private UnityEngine.UI.Image m_EButton_UpLevelImage = null;
+		private UnityEngine.UI.Text m_ELabel_Text = null;
 		private ES_AttributeItem m_es_attributeitem = null;
 		private ES_AttributeItem m_es_attributeitem1 = null;
 		private ES_AttributeItem m_es_attributeitem2 = null;

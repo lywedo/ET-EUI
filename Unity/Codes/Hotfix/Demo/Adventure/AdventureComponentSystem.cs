@@ -25,6 +25,19 @@ namespace ET
 
     public static class AdventureComponentSystem
     {
+        public static void SetBattleRandomSeed(this AdventureComponent self)
+        {
+            uint seed = (uint) UnitHelper.GetMyUnitFromCurrentScene(self.ZoneScene().CurrentScene()).GetComponent<NumericComponent>().GetAsInt(NumericType.BattleRandomSeed);
+            if (self.Random == null)
+            {
+                self.Random = new SRandom(seed);
+            }
+            else
+            {
+                self.Random.SetRandomSeed(seed);
+            }
+        }
+        
         public static void ResetAdventure(this AdventureComponent self)
         {
             for (int i = 0; i < self.EnemyIdList.Count; i++)
@@ -41,7 +54,7 @@ namespace ET
             int maxHp = unit.GetComponent<NumericComponent>().GetAsInt(NumericType.MaxHp);
             unit.GetComponent<NumericComponent>().Set(NumericType.Hp, maxHp);
             unit.GetComponent<NumericComponent>().Set(NumericType.IsAlive, 1);
-
+            self.SetBattleRandomSeed();
             Game.EventSystem.Publish(new EventType.AdventureRoundReset() { ZoneScene = self.ZoneScene() });
         }
 
@@ -50,7 +63,7 @@ namespace ET
             self.ResetAdventure();
             await self.CreateAdventureEnemy();
             self.ShowAdventureBpBarInfo(true);
-            self.BattleTimer = TimerComponent.Instance.NewOnceTimer(500, TimerType.BattleRound, self);
+            self.BattleTimer = TimerComponent.Instance.NewOnceTimer(TimeHelper.ServerNow() + 500, TimerType.BattleRound, self);
         }
 
         public static void ShowAdventureBpBarInfo(this AdventureComponent self, bool isShow)
@@ -138,7 +151,7 @@ namespace ET
             switch (battleRoundResult)
             {
                 case BattleRoundResult.KeepBattle:
-                    self.BattleTimer = TimerComponent.Instance.NewOnceTimer(500, TimerType.BattleRound, self);
+                    self.BattleTimer = TimerComponent.Instance.NewOnceTimer(TimeHelper.ServerNow() + 500, TimerType.BattleRound, self);
                     break;
                 case BattleRoundResult.WinBattle:
                     Unit unit = UnitHelper.GetMyUnitFromCurrentScene(self.ZoneScene().CurrentScene());

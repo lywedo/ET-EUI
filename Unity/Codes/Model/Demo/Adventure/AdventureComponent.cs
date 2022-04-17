@@ -8,5 +8,6 @@ namespace ET
         public int Round = 0;
         public List<long> EnemyIdList = new List<long>();
         public List<long> AliveEnermyIdList = new List<long>();
+        public SRandom Random = null;
     }
 }

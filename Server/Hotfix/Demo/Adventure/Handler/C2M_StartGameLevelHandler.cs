@@ -38,6 +38,8 @@ namespace ET
             
             numericComponent.Set(NumericType.AdventureState, request.LevelId);
             numericComponent.Set(NumericType.AdventureStarTime, TimeHelper.ServerNow());
+            
+            numericComponent.Set(NumericType.BattleRandomSeed, RandomHelper.RandUInt32());
             reply();
             await ETTask.CompletedTask;
         }

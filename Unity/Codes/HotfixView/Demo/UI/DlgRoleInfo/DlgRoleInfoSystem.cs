@@ -17,6 +17,19 @@ namespace ET
 			self.View.ES_AttributeItem2.RegisterEvent(NumericType.Agile);
 			self.View.ES_AttributeItem3.RegisterEvent(NumericType.Spirit);
 			self.View.E_AttribuitesLoopVerticalScrollRect.AddItemRefreshListener(((Transform transform, int index) => { self.OnAttributeItemRefreshHandler(transform, index);}));
+			self.View.EButton_UpLevelButton.AddListenerAsync(self.OnUpRoleLevelHandler);
+			
+			RedDotHelper.AddRedDotNodeView(self.ZoneScene(), "UpLevelButton", self.View.EButton_UpLevelButton.gameObject, Vector3.one, new Vector3(115f, 10f, 0));
+			RedDotHelper.AddRedDotNodeView(self.ZoneScene(), "AddAttribute", self.View.E_AttributePointText.gameObject, new Vector3(0.5f, 0.5f, 1), new Vector3(-17, 10f, 0.5f));
+		}
+
+		public static void OnUnloadWindow(this DlgRoleInfo self)
+		{
+			RedDotMonoView redDotMonoView = self.View.EButton_UpLevelButton.gameObject.GetComponent<RedDotMonoView>();
+			RedDotHelper.RemoveRedDotView(self.ZoneScene(), "UpLevelButton", out redDotMonoView);
+
+			redDotMonoView = self.View.E_AttributePointText.gameObject.GetComponent<RedDotMonoView>();
+			RedDotHelper.RemoveRedDotView(self.ZoneScene(), "AddAttribute", out redDotMonoView);
 		}
 
 		public static void ShowWindow(this DlgRoleInfo self, Entity contextData = null)
@@ -45,8 +58,25 @@ namespace ET
 			Scroll_Item_RoleInfoAttribuite scrollItemRoleInfoAttribuite = self.ScrollItemAttributes[index].BindTrans(transform);
 			PlayerNumericConfig config = PlayerNumericConfigCategory.Instance.GetConfigByIndex(index);
 			scrollItemRoleInfoAttribuite.E_AttributeNameText.text = config.Name + ":";
-			scrollItemRoleInfoAttribuite.E_AttributeValueText.text =
-					UnitHelper.GetMyUnitNumericComponent(self.ZoneScene().CurrentScene()).GetAsLong(config.Id).ToString();
+			scrollItemRoleInfoAttribuite.E_AttributeValueText.text = config.isPercent == 0?
+					UnitHelper.GetMyUnitNumericComponent(self.ZoneScene().CurrentScene()).GetAsLong(config.Id).ToString() :
+					$"{UnitHelper.GetMyUnitNumericComponent(self.ZoneScene().CurrentScene()).GetAsFloat(config.Id)}%";
+		}
+
+		public static async ETTask OnUpRoleLevelHandler(this DlgRoleInfo self)
+		{
+			try
+			{
+				int errorCode = await NumericHelper.RequestUpRoleLevel(self.ZoneScene());
+				if (errorCode != ErrorCode.ERR_Success)
+				{
+					return;
+				}
+			}
+			catch (Exception e)
+			{
+				Log.Error(e.ToString());
+			}
 		}
 
 	}
