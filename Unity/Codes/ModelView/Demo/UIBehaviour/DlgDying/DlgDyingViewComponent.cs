@@ -90,6 +90,40 @@ namespace ET
      		}
      	}
 
+		public UnityEngine.UI.Button EButton_ReviveButton
+     	{
+     		get
+     		{
+     			if (this.uiTransform == null)
+     			{
+     				Log.Error("uiTransform is null.");
+     				return null;
+     			}
+     			if( this.m_EButton_ReviveButton == null )
+     			{
+		    		this.m_EButton_ReviveButton = UIFindHelper.FindDeepChild<UnityEngine.UI.Button>(this.uiTransform.gameObject,"EButton_Revive");
+     			}
+     			return this.m_EButton_ReviveButton;
+     		}
+     	}
+
+		public UnityEngine.UI.Image EButton_ReviveImage
+     	{
+     		get
+     		{
+     			if (this.uiTransform == null)
+     			{
+     				Log.Error("uiTransform is null.");
+     				return null;
+     			}
+     			if( this.m_EButton_ReviveImage == null )
+     			{
+		    		this.m_EButton_ReviveImage = UIFindHelper.FindDeepChild<UnityEngine.UI.Image>(this.uiTransform.gameObject,"EButton_Revive");
+     			}
+     			return this.m_EButton_ReviveImage;
+     		}
+     	}
+
 		public void DestroyWidget()
 		{
 			this.m_EG_BgRectTransform = null;
@@ -97,6 +131,8 @@ namespace ET
 			this.m_EButton_BackButton = null;
 			this.m_EButton_BackImage = null;
 			this.m_ELabel_Text = null;
+			this.m_EButton_ReviveButton = null;
+			this.m_EButton_ReviveImage = null;
 			this.uiTransform = null;
 		}
 
@@ -105,6 +141,8 @@ namespace ET
 		private UnityEngine.UI.Button m_EButton_BackButton = null;
 		private UnityEngine.UI.Image m_EButton_BackImage = null;
 		private UnityEngine.UI.Text m_ELabel_Text = null;
+		private UnityEngine.UI.Button m_EButton_ReviveButton = null;
+		private UnityEngine.UI.Image m_EButton_ReviveImage = null;
 		public Transform uiTransform = null;
 	}
 }
