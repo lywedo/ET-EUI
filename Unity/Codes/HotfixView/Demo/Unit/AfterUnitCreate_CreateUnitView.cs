@@ -2,6 +2,7 @@
 
 namespace ET
 {
+    [FriendClass(typeof(GlobalComponent))]
     public class AfterUnitCreate_CreateUnitView: AEventAsync<EventType.AfterUnitCreate>
     {
         protected override async ETTask Run(EventType.AfterUnitCreate args)
@@ -26,11 +27,7 @@ namespace ET
             GameObject go = UnityEngine.Object.Instantiate(bundleGameObject);
             go.transform.SetParent(GlobalComponent.Instance.Unit, true);
             args.Unit.AddComponent<GameObjectComponent>().GameObject = go;
-            args.Unit.GetComponent<GameObjectComponent>().SpriteRenderer = go.GetComponent<SpriteRenderer>();
             args.Unit.AddComponent<AnimatorComponent>();
-            args.Unit.AddComponent<HeadHpViewComponent>();
-
-            args.Unit.Position = args.Unit.Type == UnitType.Player? new Vector3(-1.5f, 0, 0) : new Vector3(1.5f, RandomHelper.RandomNumber(-1, 1), 0);
         }
     }
 }
