@@ -176,6 +176,7 @@
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Localization\Localization.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Window\TimelineWindow_TimeArea.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Utilities\AnimatedParameterCache.cs" />
+    <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Utilities\FileUtility.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\State\WindowState.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Utilities\Scopes\GUIColorOverride.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\treeview\ItemGui\TimelineClipGUI.cs" />
@@ -224,10 +225,10 @@
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\State\SequencePath.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Actions\ClipAction.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Animation\AnimationTrackActions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Utilities\SpacePartitioner.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Utilities\Graphics.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\treeview\TrackGui\InlineCurveEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Recording\TimelineRecording_PlayableAsset.cs" />
-    <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Utilities\SpacePartitioner.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\inspectors\TimelineProjectSettings.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Trackhead.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Animation\CurveTreeViewNode.cs" />
@@ -312,8 +313,8 @@
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Playables\ControlPlayableInspector.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\treeview\Manipulator.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Window\TimelineWindow_TrackGui.cs" />
-    <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Utilities\ObjectReferenceField.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Utilities\Clipboard.cs" />
+    <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Utilities\ObjectReferenceField.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Utilities\TimeReferenceUtility.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\treeview\TrackGui\TimelineTrackGUI.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\State\SequenceHierarchy.cs" />
@@ -322,7 +323,6 @@
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Utilities\KeyTraverser.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\inspectors\AnimationTrackInspector.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Manipulators\Move\MoveItemModeRipple.cs" />
-    <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Utilities\FileUtility.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Unity.Timeline.Editor.asmdef" />
@@ -585,27 +585,6 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.2.15f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="CommandLine">
-      <HintPath>Assets\Plugins\CommandLine.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>Assets\Plugins\ICSharpCode.SharpZipLib.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Unsafe">
-      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.Unsafe.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Cecil.Mdb">
-      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Cecil.Pdb">
-      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Cecil">
-      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Cecil.Rocks">
-      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
-    </Reference>
     <Reference Include="DemiLib">
       <HintPath>Assets\Plugins\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
     </Reference>
@@ -615,14 +594,35 @@
     <Reference Include="DOTweenEditor">
       <HintPath>Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="DemiEditor">
       <HintPath>Assets\Plugins\Demigiant\DemiLib\Core\Editor\DemiEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Cecil.Mdb">
+      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="CommandLine">
+      <HintPath>Assets\Plugins\CommandLine.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Cecil.Pdb">
+      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Cecil">
+      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
       <HintPath>Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Burst.Cecil.Rocks">
+      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+    </Reference>
     <Reference Include="clipper_library">
       <HintPath>Library\PackageCache\com.unity.cinemachine@2.8.4\Runtime\ThirdParty\clipper_library.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>Assets\Plugins\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="DOTweenPro">
       <HintPath>Assets\Plugins\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>

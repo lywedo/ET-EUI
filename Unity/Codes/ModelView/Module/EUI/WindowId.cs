@@ -14,6 +14,7 @@
         WindowID_Loading,
         WindowID_RoleInfo,
         WindowID_Adventure,
-        WindowID_Dying
+        WindowID_Dying,
+        WindowID_Bag
     }
 }

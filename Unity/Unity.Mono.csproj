@@ -66,8 +66,8 @@
     <Compile Include="Assets\Mono\ILRuntime\Generate\System_IDisposable_Binding.cs" />
     <Compile Include="Assets\Mono\ILRuntime\Generate\System_Text_StringBuilder_Binding.cs" />
     <Compile Include="Assets\Mono\Module\Mongo\BsonIgnoreAttribute.cs" />
-    <Compile Include="Assets\Mono\ILRuntime\Generate\ET_ListComponent_1_ETTask_Binding.cs" />
     <Compile Include="Assets\Mono\ILRuntime\InputHelper.cs" />
+    <Compile Include="Assets\Mono\ILRuntime\Generate\ET_ListComponent_1_ETTask_Binding.cs" />
     <Compile Include="Assets\Mono\ILRuntime\Generate\System_Action_1_Boolean_Binding.cs" />
     <Compile Include="Assets\Mono\Helper\AssetsBundleHelper.cs" />
     <Compile Include="Assets\Mono\ILRuntime\Generate\System_BitConverter_Binding.cs" />
@@ -89,8 +89,8 @@
     <Compile Include="Assets\Mono\ILRuntime\Generate\System_Action_1_ILTypeInstance_Binding.cs" />
     <Compile Include="Assets\Mono\ILRuntime\Generate\System_Collections_Generic_Dictionary_2_Type_Type_Binding.cs" />
     <Compile Include="Assets\Mono\ILRuntime\Generate\LitJson_JsonMapper_Binding.cs" />
-    <Compile Include="Assets\Mono\ILRuntime\Generate\System_Action_1_Int64_Binding.cs" />
     <Compile Include="Assets\Mono\ILRuntime\Generate\System_Collections_Generic_Dictionary_2_UInt16_Type_Binding.cs" />
+    <Compile Include="Assets\Mono\ILRuntime\Generate\System_Action_1_Int64_Binding.cs" />
     <Compile Include="Assets\Mono\Module\NetworkTCP\WChannel.cs" />
     <Compile Include="Assets\Mono\ILRuntime\Generate\System_Collections_Generic_Dictionary_2_String_Type_Binding.cs" />
     <Compile Include="Assets\Mono\ILRuntime\Generate\UnityEngine_Debug_Binding.cs" />
@@ -201,6 +201,7 @@
     <Compile Include="Assets\Mono\ILRuntime\Generate\System_Collections_Generic_SortedDictionary_2_Int32_ILTypeInstance_Bi.cs" />
     <Compile Include="Assets\Mono\ILRuntime\Generate\System_Collections_Generic_List_1_Vector3_Binding_Enumerator_Binding.cs" />
     <Compile Include="Assets\Mono\ILRuntime\Generate\ReferenceCollector_Binding.cs" />
+    <Compile Include="Assets\Mono\Core\Helper\SRandomHelper.cs" />
     <Compile Include="Assets\Mono\ILRuntime\Generate\System_Collections_Generic_Dictionary_2_String_Byte_Array_Binding.cs" />
     <Compile Include="Assets\Mono\ILRuntime\Generate\UnityEngine_Physics_Binding.cs" />
     <Compile Include="Assets\Mono\ILRuntime\Generate\ET_MathHelper_Binding.cs" />
@@ -370,10 +371,9 @@
     <Compile Include="Assets\Mono\Module\Mongo\BsonIgnoreIfNullAttribute.cs" />
     <Compile Include="Assets\Mono\Module\Network\ErrorCore.cs" />
     <Compile Include="Assets\Mono\ILRuntime\Generate\System_IO_MemoryStream_Binding.cs" />
-    <Compile Include="Assets\Mono\ILRuntime\Generate\System_Collections_Generic_HashSet_1_ILTypeInstance_Binding_Enumerato.cs" />
     <Compile Include="Assets\Mono\ILRuntime\Generate\UnityEngine_Animator_Binding.cs" />
+    <Compile Include="Assets\Mono\ILRuntime\Generate\System_Collections_Generic_HashSet_1_ILTypeInstance_Binding_Enumerato.cs" />
     <Compile Include="Assets\Mono\Define.cs" />
-    <Compile Include="Assets\Mono\Core\Helper\SRandomHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mono\Unity.Mono.asmdef" />
@@ -628,27 +628,6 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.2.15f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="CommandLine">
-      <HintPath>Assets\Plugins\CommandLine.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>Assets\Plugins\ICSharpCode.SharpZipLib.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Unsafe">
-      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.Unsafe.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Cecil.Mdb">
-      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Cecil.Pdb">
-      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Cecil">
-      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Cecil.Rocks">
-      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
-    </Reference>
     <Reference Include="DemiLib">
       <HintPath>Assets\Plugins\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
     </Reference>
@@ -658,14 +637,35 @@
     <Reference Include="DOTweenEditor">
       <HintPath>Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="DemiEditor">
       <HintPath>Assets\Plugins\Demigiant\DemiLib\Core\Editor\DemiEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Cecil.Mdb">
+      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="CommandLine">
+      <HintPath>Assets\Plugins\CommandLine.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Cecil.Pdb">
+      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Cecil">
+      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
       <HintPath>Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Burst.Cecil.Rocks">
+      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+    </Reference>
     <Reference Include="clipper_library">
       <HintPath>Library\PackageCache\com.unity.cinemachine@2.8.4\Runtime\ThirdParty\clipper_library.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>Assets\Plugins\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="DOTweenPro">
       <HintPath>Assets\Plugins\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>

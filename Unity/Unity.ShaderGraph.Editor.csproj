@@ -107,8 +107,8 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Input\Texture\SamplerStateNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Drawing\Inspector\PropertyDrawers\SampleTexture2DNodePropertyDrawer.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Graphs\VectorShaderProperty.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Generation\Enumerations\Cull.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Interfaces\IHasCustomDeprecationMessage.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Generation\Enumerations\Cull.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Generation\Enumerations\BlendOp.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Util\PooledHashSet.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Math\Round\CeilingNode.cs" />
@@ -538,8 +538,8 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Channel\FlipNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Artistic\Adjustment\SaturationNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Drawing\Inspector\PropertyDrawers\CustomFunctionNodePropertyDrawer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Graphs\DataStore.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Graphs\ParentGroupChange.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Graphs\DataStore.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Input\Scene\ScreenNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Input\Texture\TexelSizeNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Drawing\SearchWindowAdapter.cs" />
@@ -619,9 +619,9 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Attributes\NeverAllowedByTargetAttribute.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Legacy\SlotReference0.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Graphs\Vector1MaterialSlot.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Drawing\ViewModels\InspectorViewModel.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Generation\Descriptors\PragmaDescriptor.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Input\Texture\SampleRawCubemapNode.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Drawing\ViewModels\InspectorViewModel.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Legacy\SpriteUnlitMasterNode1.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\ShaderGraphProjectSettings.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Interfaces\PositionSource.cs" />
@@ -633,8 +633,8 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Math\Advanced\ExponentialNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Drawing\Views\Slots\MultiIntegerSlotControlView.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Drawing\Colors\PrecisionColors.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Drawing\Inspector\TabbedView\TabbedView.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Graphs\UVMaterialSlot.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Drawing\Inspector\TabbedView\TabbedView.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Math\Round\SignNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Graphs\SamplerStateMaterialSlot.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Generation\Controls.cs" />
@@ -665,8 +665,8 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Graphs\Texture2DArrayShaderProperty.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Drawing\Inspector\PropertyDrawers\TextPropertyDrawer.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Generation\Processors\Generator.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Utility\Logic\BranchOnInputConnection.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Legacy\GraphData0.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Utility\Logic\BranchOnInputConnection.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Nodes\Utility\Logic\AnyNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Data\Legacy\SpriteLitMasterNode1.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.5\Editor\Drawing\Inspector\PropertyDrawers\IntegerPropertyDrawer.cs" />
@@ -1072,27 +1072,6 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.2.15f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="CommandLine">
-      <HintPath>Assets\Plugins\CommandLine.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>Assets\Plugins\ICSharpCode.SharpZipLib.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Unsafe">
-      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.Unsafe.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Cecil.Mdb">
-      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Cecil.Pdb">
-      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Cecil">
-      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Cecil.Rocks">
-      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
-    </Reference>
     <Reference Include="DemiLib">
       <HintPath>Assets\Plugins\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
     </Reference>
@@ -1102,14 +1081,35 @@
     <Reference Include="DOTweenEditor">
       <HintPath>Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="DemiEditor">
       <HintPath>Assets\Plugins\Demigiant\DemiLib\Core\Editor\DemiEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Cecil.Mdb">
+      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="CommandLine">
+      <HintPath>Assets\Plugins\CommandLine.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Cecil.Pdb">
+      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Cecil">
+      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
       <HintPath>Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Burst.Cecil.Rocks">
+      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+    </Reference>
     <Reference Include="clipper_library">
       <HintPath>Library\PackageCache\com.unity.cinemachine@2.8.4\Runtime\ThirdParty\clipper_library.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>Assets\Plugins\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="DOTweenPro">
       <HintPath>Assets\Plugins\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
