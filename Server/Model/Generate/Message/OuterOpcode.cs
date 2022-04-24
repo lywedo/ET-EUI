@@ -66,5 +66,9 @@ namespace ET
 		 public const ushort M2C_UPRoleLevel = 10063;
 		 public const ushort C2M_Revive = 10064;
 		 public const ushort M2C_Revive = 10065;
+		 public const ushort ItemInfo = 10066;
+		 public const ushort M2C_AllItemsList = 10067;
+		 public const ushort M2C_ItemUpdateOpInfo = 10068;
+		 public const ushort AttributeEntryProto = 10069;
 	}
 }
