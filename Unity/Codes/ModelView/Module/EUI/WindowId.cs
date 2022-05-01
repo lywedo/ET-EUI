@@ -15,6 +15,7 @@
         WindowID_RoleInfo,
         WindowID_Adventure,
         WindowID_Dying,
-        WindowID_Bag
+        WindowID_Bag,
+        WindowID_ItemPopUp
     }
 }

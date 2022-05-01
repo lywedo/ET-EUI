@@ -34,6 +34,14 @@
       <Link>Demo\Bag\BagComponent.cs</Link>
     </Compile>
 
+    <Compile Include="..\..\Unity\Codes\Model\Demo\Item\AttributeEntry.cs">
+      <Link>Demo\Item\AttributeEntry.cs</Link>
+    </Compile>
+
+    <Compile Include="..\..\Unity\Codes\Model\Demo\Item\EquipInfoComponent.cs">
+      <Link>Demo\Item\EquipInfoComponent.cs</Link>
+    </Compile>
+
     <Compile Include="..\..\Unity\Codes\Model\Demo\Item\Item.cs">
       <Link>Demo\Item\Item.cs</Link>
     </Compile>

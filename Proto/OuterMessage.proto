@@ -535,3 +535,52 @@ message AttributeEntryProto
 	int64 Value = 3;
 	int32 EntryType = 4;
 }
+
+message EquipInfoProto
+{
+	int64 Id = 1;
+	int32 Score = 2;
+	repeated AttributeEntryProto AttributeEntryProtoList = 3;
+}
+
+//ResponseType M2C_EquipItem
+message C2M_EquipItem //IActorLocationRequest
+{
+	int32 RpcId = 1;
+	int64 ItemUid = 2;
+}
+
+message M2C_EquipItem //IActorLocationResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+}
+
+//ResponseType M2C_UnloadEquipItem
+message C2M_UnloadEquipItem //IActorLocationRequest
+{
+	int32 RpcId = 1;
+	int32 EquipPosition = 2;
+}
+
+message M2C_UnloadEquipItem //IActorLocationResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+}
+
+//ResponseType M2C_SellItem
+message C2M_SellItem //IActorLocationRequest
+{
+	int32 RpcId = 1;
+	int64 ItemUid = 2;
+}
+
+message M2C_SellItem //IActorLocationResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+}

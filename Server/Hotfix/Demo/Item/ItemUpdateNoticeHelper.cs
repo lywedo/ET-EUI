@@ -23,7 +23,7 @@
         {
             M2C_AllItemsList m2CAllItemsList = new M2C_AllItemsList(){ContainerType = (int)ItemContainerType.Bag};
             BagComponent bagComponent = unit.GetComponent<BagComponent>();
-            foreach (Item item in bagComponent.ItemDict.Values)
+            foreach (Item item in bagComponent.ItemsDict.Values)
             {
                 m2CAllItemsList.ItemInfoList.Add(item.ToMessage());
             }

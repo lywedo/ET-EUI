@@ -16,7 +16,7 @@ namespace ET
 #if SERVER
         [BsonIgnore]
 #endif
-        public Dictionary<long, Item> ItemDict = new Dictionary<long, Item>();
+        public Dictionary<long, Item> ItemsDict = new Dictionary<long, Item>();
 #if SERVER
         [BsonIgnore]
 #endif

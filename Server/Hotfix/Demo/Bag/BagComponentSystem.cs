@@ -1,4 +1,6 @@
-﻿namespace ET
+﻿using System.Collections.Generic;
+
+namespace ET
 {
     
     public class BagComponentDeserializeSystem: DeserializeSystem<BagComponent>
@@ -19,17 +21,17 @@
         //是否达到最大负载
         public static bool IsMaxLoad(this BagComponent self)
         {
-            return self.ItemDict.Count == self.GetParent<Unit>().GetComponent<NumericComponent>()[NumericType.MaxBagCapacity];
+            return self.ItemsDict.Count == self.GetParent<Unit>().GetComponent<NumericComponent>()[NumericType.MaxBagCapacity];
         }
 
         public static bool AddContainer(this BagComponent self, Item item)
         {
-            if (self.ItemDict.ContainsKey(item.Id))
+            if (self.ItemsDict.ContainsKey(item.Id))
             {
                 return false;
             }
             
-            self.ItemDict.Add(item.Id, item);
+            self.ItemsDict.Add(item.Id, item);
             self.ItemsMap.Add(item.Config.Type, item);
             return true;
         }
@@ -50,7 +52,7 @@
 
         public static void RemoveContainer(this BagComponent self, Item item)
         {
-            self.ItemDict.Remove(item.Id);
+            self.ItemsDict.Remove(item.Id);
             self.ItemsMap.Remove(item.Config.Type, item);
         }
 
@@ -79,6 +81,11 @@
 
             return true;
         }
+
+        // public static void GetItemListByConfigId(this BagComponent self, int configID, List<Item> list)
+        // {
+        //     
+        // }
 
         public static bool AddItem(this BagComponent self, Item item)
         {
@@ -114,6 +121,25 @@
             self.RemoveContainer(item);
             ItemUpdateNoticeHelper.SyncRemoveItem(self.GetParent<Unit>(), item, self.message);
             item.Dispose();
+        }
+
+        public static Item RemoveItemNoDispose(this BagComponent self, Item item)
+        {
+            self.RemoveContainer(item);
+            ItemUpdateNoticeHelper.SyncRemoveItem(self.GetParent<Unit>(), item, self.message);
+            return item;
+        }
+
+        public static bool IsItemExist(this BagComponent self, long itemId)
+        {
+            self.ItemsDict.TryGetValue(itemId, out Item item);
+            return item != null && !item.IsDisposed;
+        }
+
+        public static Item GetItemById(this BagComponent self, long itemId)
+        {
+            self.ItemsDict.TryGetValue(itemId, out Item item);
+            return item;
         }
     }
 }

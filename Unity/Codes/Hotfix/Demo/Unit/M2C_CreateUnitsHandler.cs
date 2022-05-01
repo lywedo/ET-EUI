@@ -3,7 +3,7 @@
 	[MessageHandler]
 	public class M2C_CreateUnitsHandler : AMHandler<M2C_CreateUnits>
 	{
-		protected override void Run(Session session, M2C_CreateUnits message)
+		protected override async void Run(Session session, M2C_CreateUnits message)
 		{
 			Scene currentScene = session.DomainScene().CurrentScene();
 			UnitComponent unitComponent = currentScene.GetComponent<UnitComponent>();
