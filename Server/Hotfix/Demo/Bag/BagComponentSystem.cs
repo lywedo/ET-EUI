@@ -87,6 +87,36 @@ namespace ET
         //     
         // }
 
+        public static bool IsCanAddItem(this BagComponent self, Item item)
+        {
+            if (item == null || item.IsDisposed)
+            {
+                return false;
+            }
+
+            if (!ItemConfigCategory.Instance.Contain(item.ConfigId))
+            {
+                return false;
+            }
+
+            if (self.IsMaxLoad())
+            {
+                return false;
+            }
+
+            if (self.ItemsDict.ContainsKey(item.Id))
+            {
+                return false;
+            }
+
+            if (item.Parent == self)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
         public static bool AddItem(this BagComponent self, Item item)
         {
             if (item == null || item.IsDisposed)
